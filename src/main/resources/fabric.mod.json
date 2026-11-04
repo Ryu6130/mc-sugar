@@ -9,9 +9,9 @@
     "Ryu6130"
   ],
   "contact": {
-    "sources": "https://example.com",
-    "homepage": "https://example.com",
-    "issues": "https://example.com"
+    "sources": "https://github.com/Ryu6130/mc-sugar",
+    "homepage": "https://github.com/Ryu6130/mc-sugar",
+    "issues": "https://github.com/Ryu6130/mc-sugar/issues"
   },
 
   "license": "MIT License",

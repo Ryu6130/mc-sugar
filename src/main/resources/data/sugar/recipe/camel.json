@@ -1,0 +1,9 @@
+{
+  "type": "sugar:desugaring",
+  "ingredient": "sugar:caramel",
+  "time": 160,
+  "result": {
+    "id": "minecraft:camel_spawn_egg",
+    "count": 1
+  }
+}

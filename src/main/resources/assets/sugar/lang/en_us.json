@@ -1,0 +1,14 @@
+{
+  "item.sugar.sugar_cube": "Sugar Cube",
+  "block.sugar.sugar_cube": "Sugar Cube",
+  "item.sugar.caramel": "Caramel",
+  "item.sugar.konpeito": "Konpeito",
+  "block.sugar.konpeito_block": "Konpeito Block",
+  "item.sugar.konpeito_block": "Konpeito Block",
+  "block.sugar.desugarer": "Desugarer",
+  "item.sugar.desugarer": "Desugarer",
+  "item.sugar.bioplastic": "Bioplastic",
+  "item.sugar.sugar_storage": "Sugar Storage",
+  "entity.sugar.desert_dessert": "Desert Dessert",
+  "item.sugar.sand_berry": "Sand Berry"
+}

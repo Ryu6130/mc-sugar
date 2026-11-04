@@ -1,0 +1,9 @@
+{
+  "type": "sugar:desugaring",
+  "ingredient": "sugar:konpeito",
+  "time": 160,
+  "result": {
+    "id": "minecraft:gold_nugget",
+    "count": 1
+  }
+}

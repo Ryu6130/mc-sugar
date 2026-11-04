@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "minecraft:sugar",
+  "result": {
+    "id": "sugar:caramel"
+  },
+  "experience": 0.4,
+  "cookingtime": 160
+}

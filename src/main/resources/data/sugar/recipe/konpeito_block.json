@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"KK",
+		"KK"
+	],
+	"key": {
+		"K": "sugar:konpeito"
+	},
+	"result": {
+		"id": "sugar:konpeito_block",
+		"count": 1
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "sugar:block/desugarer"
+    },
+    "facing=south": {
+      "model": "sugar:block/desugarer",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "sugar:block/desugarer",
+      "y": 90
+    },
+    "facing=west": {
+      "model": "sugar:block/desugarer",
+      "y": 270
+    }
+  }
+}

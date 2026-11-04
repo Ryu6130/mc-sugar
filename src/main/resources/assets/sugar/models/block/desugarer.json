@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "sugar:block/desugarer_side",
+    "north": "sugar:block/desugarer_front",
+    "south": "sugar:block/desugarer_side",
+    "east": "sugar:block/desugarer_side",
+    "west": "sugar:block/desugarer_side",
+    "up": "sugar:block/desugarer_side",
+    "down": "sugar:block/desugarer_side"
+  }
+}

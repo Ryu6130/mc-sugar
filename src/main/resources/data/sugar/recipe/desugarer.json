@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"RRR",
+		"RSR",
+		"RKR"
+	],
+	"key": {
+		"R": "#minecraft:stone_tool_materials",
+		"K": "sugar:konpeito_block",
+		"S": "sugar:sugar_storage"
+	},
+	"result": {
+		"id": "sugar:desugarer",
+		"count": 1
+	}
+}

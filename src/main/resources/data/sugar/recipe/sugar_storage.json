@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" B ",
+		"BSB",
+		" B "
+	],
+	"key": {
+		"B": "sugar:bioplastic",
+		"S": "sugar:sugar_cube"
+	},
+	"result": {
+		"id": "sugar:sugar_storage",
+		"count": 1
+	}
+}

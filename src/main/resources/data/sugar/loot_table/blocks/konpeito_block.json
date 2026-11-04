@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sugar:konpeito_block"
+        }
+      ],
+      "condition": {
+        "type": "minecraft:match_tool",
+        "predicate": {
+          "predicates": {
+            "minecraft:enchantments": [
+              {
+                "enchantments": "minecraft:silk_touch",
+                "levels": {
+                  "min": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "rolls": 4,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sugar:konpeito"
+        }
+      ],
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:inverted",
+            "term": {
+              "type": "minecraft:match_tool",
+              "predicate": {
+                "predicates": {
+                  "minecraft:enchantments": [
+                    {
+                      "enchantments": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "type": "minecraft:survives_explosion"
+          }
+        ]
+      }
+    }
+  ]
+}

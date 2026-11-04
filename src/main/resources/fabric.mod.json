@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "sugar",
+  "version": "0.1.1",
+
+  "name": "Sugar Mod",
+  "description": "This is a sweetest.",
+  "authors": [
+    "Ryu6130"
+  ],
+  "contact": {
+    "sources": "https://example.com",
+    "homepage": "https://example.com",
+    "issues": "https://example.com"
+  },
+
+  "license": "MIT License",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "sugar.client.SugarClientMod"
+    ],
+    "main": [
+      "sugar.SugarMod"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.15.10",
+    "fabric-api": "*"
+  }
+}

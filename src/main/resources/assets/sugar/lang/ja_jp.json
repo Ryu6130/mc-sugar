@@ -1,0 +1,14 @@
+{
+  "item.sugar.sugar_cube": "角砂糖",
+  "block.sugar.sugar_cube": "角砂糖",
+  "item.sugar.caramel": "キャラメル",
+  "item.sugar.konpeito": "金平糖",
+  "block.sugar.konpeito_block": "金平糖ブロック",
+  "item.sugar.konpeito_block": "金平糖ブロック",
+  "block.sugar.desugarer": "脱糖機",
+  "item.sugar.desugarer": "脱糖機",
+  "item.sugar.bioplastic": "バイオプラスチック",
+  "item.sugar.sugar_storage": "シュガーストレージ",
+  "entity.sugar.desert_dessert": "デザート・デザート",
+  "item.sugar.sand_berry": "サンドベリー"
+}

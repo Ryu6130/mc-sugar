@@ -8,6 +8,7 @@ public class ModBlockItemIds {
 	public static final BlockItemId SUGAR_CUBE = create("sugar_cube");
 	public static final BlockItemId KONPEITO_BLOCK = create("konpeito_block");
 	public static final BlockItemId DESUGARER = create("desugarer");
+	public static final BlockItemId SUGARRACK = create("sugarrack");
 
 	private static BlockItemId create(String name) {
 		Identifier id = SugarMod.id(name);

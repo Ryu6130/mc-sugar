@@ -40,6 +40,14 @@ public class ModBlocks {
 			.strength(1f)
 			.pushReaction(PushReaction.IMMOVEABLE)
     );
+	
+    public static final Block SUGARRACK = register(
+		ModBlockItemIds.SUGARRACK,
+		Block::new,
+		BlockBehaviour.Properties.of()
+			.sound(SoundType.NETHERRACK)
+			.strength(3f)
+    );
 
 	private static Block register(
         BlockItemId id,

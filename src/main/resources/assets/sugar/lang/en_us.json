@@ -11,5 +11,8 @@
   "item.sugar.sugar_storage": "Sugar Storage",
   "entity.sugar.desert_dessert": "Desert Dessert",
   "item.sugar.sand_berry": "Sand Berry",
-  "item.sugar.sugar_cell": "Sugar Cell"
+  "item.sugar.sugar_cell": "Sugar Cell",
+  "entity.sugar.sugardian": "Sugardian",
+  "block.sugar.sugarrack": "Sugarrack",
+  "item.sugar.sugarrack": "Sugarrack"
 }

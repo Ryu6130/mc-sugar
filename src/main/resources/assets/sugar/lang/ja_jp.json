@@ -11,5 +11,8 @@
   "item.sugar.sugar_storage": "シュガーストレージ",
   "entity.sugar.desert_dessert": "デザート・デザート",
   "item.sugar.sand_berry": "サンドベリー",
-  "item.sugar.sugar_cell": "シュガーセル"
+  "item.sugar.sugar_cell": "シュガーセル",
+  "entity.sugar.sugardian": "シュガーディアン",
+  "block.sugar.sugarrack": "シュガーラック",
+  "item.sugar.sugarrack": "シュガーラック"
 }

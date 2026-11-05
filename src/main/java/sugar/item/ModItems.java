@@ -67,6 +67,7 @@ public class ModItems {
     public static void initialize() {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> {
             creativeTab.accept(ModBlocks.SUGAR_CUBE);
+            creativeTab.accept(ModBlocks.SUGARRACK);
             creativeTab.accept(CARAMEL);
             creativeTab.accept(KONPEITO);
             creativeTab.accept(ModBlocks.KONPEITO_BLOCK);
@@ -83,6 +84,7 @@ public class ModItems {
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register((creativeTab) -> {
             creativeTab.accept(SUGAR_STORAGE);
+            creativeTab.accept(SUGAR_CELL);
         });
     }
 }

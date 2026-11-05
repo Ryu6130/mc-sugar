@@ -18,6 +18,14 @@ public class ModEntityTypes {
 				.notInPeaceful(),
 			DesertDessert.createAttributes()
 	);
+	
+	public static final EntityType<Sugardian> SUGARDIAN = register(
+			ModEntityTypeIds.SUGARDIAN,
+			EntityType.Builder.<Sugardian>of(Sugardian::new, MobCategory.MONSTER)
+				.sized(2.5f, 3f)
+				.notInPeaceful(),
+			Sugardian.createAttributes()
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

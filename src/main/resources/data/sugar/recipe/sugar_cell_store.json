@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"sugar:sugar_cell",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:sugar"
+	],
+	"result": {
+		"id": "sugar:sugar_cell",
+		"count": 1
+	}
+}

@@ -46,6 +46,12 @@ public class ModItems {
         new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(1f).build())
     );
 
+    public static final Item SUGAR_CELL = register(
+        ModItemIds.SUGAR_CELL,
+        SugarCell::new,
+        new Item.Properties().durability(20).stacksTo(1)
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

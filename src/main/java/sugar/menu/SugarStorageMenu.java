@@ -1,10 +1,12 @@
 package sugar.menu;
 
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerInput;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -20,21 +22,28 @@ public class SugarStorageMenu extends AbstractContainerMenu {
 	private static final int INVENTORY_END = INVENTORY_START + Inventory.INVENTORY_SIZE;
 
 	private final Container container;
+	private final Inventory inventory;
+	private final int mainSlotId;
 
 	public SugarStorageMenu(final int containerId, final Inventory inventory, int hand) {
-		this(containerId, inventory,
-			new SugarStorageContainer(inventory.player.getItemInHand(hand == 0 ?
-				InteractionHand.MAIN_HAND : InteractionHand.OFF_HAND)));
+		this(containerId, inventory, hand == 0 ? InteractionHand.MAIN_HAND : InteractionHand.OFF_HAND);
 	}
 
 	public SugarStorageMenu(
 		final int containerId,
 		final Inventory inventory,
-		final Container container
+		final InteractionHand hand
 	) {
 		super(ModMenuTypes.SUGAR_STORAGE, containerId);
+
+		this.mainSlotId = switch (hand) {
+			case InteractionHand.MAIN_HAND -> inventory.getSelectedSlot();
+			case InteractionHand.OFF_HAND -> Inventory.SLOT_OFFHAND;
+		};
+		this.inventory = inventory;
+		ItemStack stack = inventory.player.getItemInHand(hand);
+		this.container = new SugarStorageContainer(stack);
 		checkContainerSize(container, SLOTS_COUNT);
-        this.container = container;
         
 		container.startOpen(inventory.player);
 
@@ -61,6 +70,20 @@ public class SugarStorageMenu extends AbstractContainerMenu {
         
 		this.addStandardInventorySlots(inventory, 8, 84);
     }
+
+	@Override
+	public void clicked(int slotIndex, int buttonNum, ContainerInput containerInput, Player player) {
+		super.clicked(slotIndex, buttonNum, containerInput, player);
+
+		if (slotIndex >= 0 && slotIndex < slots.size()) {
+			Slot slot = getSlot(slotIndex);
+			if (
+				slot.container == inventory &&
+				slot.getContainerSlot() == mainSlotId &&
+				player instanceof ServerPlayer serverPlayer
+			) serverPlayer.closeContainer();
+		}
+	}
 
 	@Override
 	public ItemStack quickMoveStack(Player player, int slotIndex) {
@@ -94,7 +117,10 @@ public class SugarStorageMenu extends AbstractContainerMenu {
 
 	@Override
 	public boolean stillValid(Player player) {
-		return this.container.stillValid(player);
+		return this.container.stillValid(player) && (
+			mainSlotId == Inventory.SLOT_OFFHAND ||
+			mainSlotId == inventory.getSelectedSlot()
+		);
 	}
 
 	@Override

@@ -43,7 +43,7 @@ public class ModBlocks {
 	
     public static final Block SUGARRACK = register(
 		ModBlockItemIds.SUGARRACK,
-		Block::new,
+		Sugarrack::new,
 		BlockBehaviour.Properties.of()
 			.sound(SoundType.NETHERRACK)
 			.strength(3f)

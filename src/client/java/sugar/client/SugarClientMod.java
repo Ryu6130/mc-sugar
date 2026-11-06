@@ -7,6 +7,7 @@ import sugar.entity.DesertDessertRenderer;
 import sugar.entity.ModEntityModelLayers;
 import sugar.entity.ModEntityTypes;
 import sugar.entity.SugardianRenderer;
+import sugar.item.JetManager;
 import sugar.menu.DesugarerScreen;
 import sugar.menu.ModMenuTypes;
 import sugar.menu.SugarStorageScreen;
@@ -19,5 +20,6 @@ public class SugarClientMod implements ClientModInitializer {
 		ModEntityModelLayers.registerModelLayers();
         EntityRenderers.register(ModEntityTypes.DESERT_DESSERT, DesertDessertRenderer::new);
         EntityRenderers.register(ModEntityTypes.SUGARDIAN, SugardianRenderer::new);
+        JetManager.clientInitialize();
     }
 }

@@ -10,6 +10,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.equipment.ArmorType;
 import sugar.block.ModBlocks;
 
 public class ModItems {
@@ -52,6 +53,19 @@ public class ModItems {
         new Item.Properties().durability(20).stacksTo(1)
     );
 
+    public static final Item SUGARITE_INGOT = register(
+        ModItemIds.SUGARITE_INGOT,
+        Item::new,
+        new Item.Properties()
+    );
+
+    public static final Item JET_BOOTS = register(
+        ModItemIds.JET_BOOTS,
+        Item::new,
+        new Item.Properties().humanoidArmor(ModArmors.JET_BOOTS, ArmorType.BOOTS)
+            .durability(ArmorType.HELMET.getDurability(ModArmors.JET_BOOTS.durability()))
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,
@@ -68,6 +82,7 @@ public class ModItems {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register((creativeTab) -> {
             creativeTab.accept(ModBlocks.SUGAR_CUBE);
             creativeTab.accept(ModBlocks.SUGARRACK);
+            creativeTab.accept(SUGARITE_INGOT);
             creativeTab.accept(CARAMEL);
             creativeTab.accept(KONPEITO);
             creativeTab.accept(ModBlocks.KONPEITO_BLOCK);
@@ -86,5 +101,10 @@ public class ModItems {
             creativeTab.accept(SUGAR_STORAGE);
             creativeTab.accept(SUGAR_CELL);
         });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register((creativeTab) -> {
+            creativeTab.accept(JET_BOOTS);
+        });
+
+        JetManager.initialize();
     }
 }

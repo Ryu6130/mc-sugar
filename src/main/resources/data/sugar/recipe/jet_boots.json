@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SRS",
+		"SGS"
+	],
+	"key": {
+		"R": "minecraft:redstone",
+		"G": "minecraft:gunpowder",
+		"S": "sugar:sugarite_ingot"
+	},
+	"result": {
+		"id": "sugar:jet_boots",
+		"count": 1
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "sugar:sugarrack",
+  "result": {
+    "id": "sugar:sugarite_ingot"
+  },
+  "experience": 1,
+  "cookingtime": 160
+}

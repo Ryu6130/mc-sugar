@@ -37,7 +37,7 @@ public class ModBlocks {
 		Desugarer::new,
 		BlockBehaviour.Properties.of()
 			.sound(SoundType.STONE)
-			.strength(1f)
+			.strength(2f)
 			.pushReaction(PushReaction.IMMOVEABLE)
     );
 	

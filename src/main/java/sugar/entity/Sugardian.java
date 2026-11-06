@@ -24,6 +24,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 
 public class Sugardian extends Monster {
+    private OptionalInt chargeTicks = OptionalInt.empty();
+
     protected Sugardian(EntityType<? extends Sugardian> type, Level level) {
         super(type, level);
         this.xpReward = XP_REWARD_HUGE;
@@ -38,8 +40,6 @@ public class Sugardian extends Monster {
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
         this.goalSelector.addGoal(1, new FloatGoal(this));
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, false) {
-            private OptionalInt chargeTicks = OptionalInt.empty();
-
             @Override
             protected void checkAndPerformAttack(LivingEntity target) {
                 if (this.canPerformAttack(target)) {
@@ -59,12 +59,31 @@ public class Sugardian extends Monster {
                     if (ticks >= 40) {
                         chargeTicks = OptionalInt.empty();
                         this.mob.getEntityData().set(ATTACKING, false);
+                        this.resetAttackCooldown();
                     }
                 }
+            }
+
+            @Override
+            public void stop() {
+                super.stop();
+                
+                chargeTicks = OptionalInt.empty();
+                this.mob.getEntityData().set(ATTACKING, false);
             }
         });
         this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 0.5));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+    }
+
+    @Override
+    public void tick() {
+        super.tick();
+        
+        if (getTarget() == null && chargeTicks.isPresent()) {
+            chargeTicks = OptionalInt.empty();
+            getEntityData().set(ATTACKING, false);
+        }
     }
 
     @Override

@@ -23,5 +23,9 @@
   "item.sugar.cane_leaves": "Cane Leaves",
   "block.sugar.cane_leaves": "Cane Leaves",
   "item.sugar.ender_berries": "Ender Berries",
-  "item.sugar.the_end_supper": "The End Supper"
+  "item.sugar.the_end_supper": "The End Supper",
+  "item.sugar.sculk_berries": "Sculk Berries",
+  "item.sugar.flame_berries": "Flame Berries",
+  "item.sugar.frosted_berries": "Frosted Berries",
+  "item.sugar.ocean_berries": "Ocean Berries"
 }

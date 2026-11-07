@@ -1,0 +1,10 @@
+{
+    "type": "sugar:clicking_entity",
+    "entity": {
+        "minecraft:entity_type": "minecraft:blaze"
+    },
+    "item": "#sugar:berries",
+    "result": {
+        "id": "sugar:flame_berries"
+    }
+}

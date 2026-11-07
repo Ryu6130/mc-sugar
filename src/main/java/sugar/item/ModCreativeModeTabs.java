@@ -28,6 +28,10 @@ public class ModCreativeModeTabs {
             output.accept(ModBlocks.KONPEITO_BLOCK);
 
             output.accept(ModItems.SAND_BERRY);
+            output.accept(ModItems.FROSTED_BERRIES);
+            output.accept(ModItems.OCEAN_BERRIES);
+            output.accept(ModItems.SCULK_BERRIES);
+            output.accept(ModItems.FLAME_BERRIES);
             output.accept(ModItems.ENDER_BERRIES);
             output.accept(ModItems.THE_END_SUPPER);
             

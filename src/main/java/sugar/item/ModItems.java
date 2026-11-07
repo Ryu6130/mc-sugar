@@ -5,11 +5,14 @@ import java.util.function.Function;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.consume_effects.TeleportRandomlyConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorType;
 
@@ -80,9 +83,45 @@ public class ModItems {
         Item::new,
         new Item.Properties().stacksTo(1).food(
             new FoodProperties.Builder().nutrition(5).saturationModifier(1.1f).build(),
-            Consumables.defaultDrink()
+            Consumables.defaultFood()
                 .onConsume(new TeleportRandomlyConsumeEffect(32, true)).build()
         ).usingConvertsTo(Items.BOWL)
+    );
+
+    public static final Item SCULK_BERRIES = register(
+        ModItemIds.SCULK_BERRIES,
+        Item::new,
+        new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationModifier(1f).build())
+    );
+
+    public static final Item FLAME_BERRIES = register(
+        ModItemIds.FLAME_BERRIES,
+        FlameBerries::new,
+        new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationModifier(1f).build())
+    );
+
+    public static final Item FROSTED_BERRIES = register(
+        ModItemIds.FROSTED_BERRIES,
+        Item::new,
+        new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(5).saturationModifier(1f).build(),
+            Consumables.defaultFood().onConsume(
+                new ApplyStatusEffectsConsumeEffect(
+                    new MobEffectInstance(MobEffects.SLOWNESS, 60, 1), 1)
+                ).build()
+        )
+    );
+
+    public static final Item OCEAN_BERRIES = register(
+        ModItemIds.OCEAN_BERRIES,
+        Item::new,
+        new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(2).saturationModifier(1.3f).build(),
+            Consumables.defaultFood().onConsume(
+                new ApplyStatusEffectsConsumeEffect(
+                    new MobEffectInstance(MobEffects.WATER_BREATHING, 400, 1), 1)
+                ).build()
+        )
     );
 
 	public static Item register(

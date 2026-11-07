@@ -1,0 +1,10 @@
+{
+    "type": "sugar:clicking_block",
+    "block": {
+        "blocks": ["minecraft:blue_ice", "minecraft:powder_snow"]
+    },
+    "item": "#sugar:berries",
+    "result": {
+        "id": "sugar:frosted_berries"
+    }
+}

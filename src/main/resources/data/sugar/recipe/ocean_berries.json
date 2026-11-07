@@ -1,0 +1,10 @@
+{
+    "type": "sugar:clicking_block",
+    "block": {
+        "blocks": "minecraft:sea_lantern"
+    },
+    "item": "#sugar:berries",
+    "result": {
+        "id": "sugar:ocean_berries"
+    }
+}

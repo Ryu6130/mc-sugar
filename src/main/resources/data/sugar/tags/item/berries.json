@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sweet_berries",
+    "minecraft:glow_berries",
+    "sugar:sand_berry",
+    "sugar:ender_berries",
+    "sugar:sculk_berries",
+    "sugar:flame_berries",
+    "sugar:frosted_berries",
+    "sugar:ocean_berries"
+  ]
+}

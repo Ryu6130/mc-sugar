@@ -23,5 +23,9 @@
   "item.sugar.cane_leaves": "キビの葉",
   "block.sugar.cane_leaves": "キビの葉",
   "item.sugar.ender_berries": "エンダーベリー",
-  "item.sugar.the_end_supper": "ジ・エンドの晩餐"
+  "item.sugar.the_end_supper": "ジ・エンドの晩餐",
+  "item.sugar.sculk_berries": "スカルクベリー",
+  "item.sugar.flame_berries": "フレイムベリー",
+  "item.sugar.frosted_berries": "フロストベリー",
+  "item.sugar.ocean_berries": "オーシャンベリー"
 }

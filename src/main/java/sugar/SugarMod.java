@@ -6,6 +6,7 @@ import sugar.block.ModBlocks;
 import sugar.blockentity.ModBlockEntityTypes;
 import sugar.entity.ModEntitySpawns;
 import sugar.entity.ModEntityTypes;
+import sugar.item.ModCreativeModeTabs;
 import sugar.item.ModDispenserBehaviors;
 import sugar.item.ModItems;
 import sugar.menu.ModMenuTypes;
@@ -24,6 +25,7 @@ public class SugarMod implements ModInitializer {
         ModEntityTypes.initialize();
         ModEntitySpawns.initialize();
         ModDispenserBehaviors.initialize();
+        ModCreativeModeTabs.initialize();
     }
 
 	public static Identifier id(String path) {

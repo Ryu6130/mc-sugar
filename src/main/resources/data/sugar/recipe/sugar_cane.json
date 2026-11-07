@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"sugar:cane_log",
+		"minecraft:sugar"
+	],
+	"result": {
+		"id": "minecraft:sugar_cane",
+		"count": 4
+	}
+}

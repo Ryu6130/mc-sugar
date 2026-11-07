@@ -1,4 +1,5 @@
 {
+  "creativeTab.sugar": "Sugar Mod",
   "item.sugar.sugar_cube": "Sugar Cube",
   "block.sugar.sugar_cube": "Sugar Cube",
   "item.sugar.caramel": "Caramel",
@@ -10,11 +11,17 @@
   "item.sugar.bioplastic": "Bioplastic",
   "item.sugar.sugar_storage": "Sugar Storage",
   "entity.sugar.desert_dessert": "Desert Dessert",
-  "item.sugar.sand_berry": "Sand Berry",
+  "item.sugar.sand_berry": "Sand Berries",
   "item.sugar.sugar_cell": "Sugar Cell",
   "entity.sugar.sugardian": "Sugardian",
   "block.sugar.sugarrack": "Sugarrack",
   "item.sugar.sugarrack": "Sugarrack",
   "item.sugar.jet_boots": "Jet Boots",
-  "item.sugar.sugarite_ingot": "Sugarite Ingot"
+  "item.sugar.sugarite_ingot": "Sugarite Ingot",
+  "item.sugar.cane_log": "Cane Log",
+  "block.sugar.cane_log": "Cane Log",
+  "item.sugar.cane_leaves": "Cane Leaves",
+  "block.sugar.cane_leaves": "Cane Leaves",
+  "item.sugar.ender_berries": "Ender Berries",
+  "item.sugar.the_end_supper": "The End Supper"
 }

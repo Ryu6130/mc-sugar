@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"EEE",
+		"ESE",
+		"EEE"
+	],
+	"key": {
+		"E": "minecraft:ender_pearl",
+        "S": "minecraft:shulker_shell"
+	},
+	"result": {
+		"id": "sugar:ender_berries",
+		"count": 1
+	}
+}

@@ -14,6 +14,8 @@ public class ModItemIds {
 	public static final ResourceKey<Item> SUGAR_CELL = create("sugar_cell");
 	public static final ResourceKey<Item> SUGARITE_INGOT = create("sugarite_ingot");
 	public static final ResourceKey<Item> JET_BOOTS = create("jet_boots");
+	public static final ResourceKey<Item> ENDER_BERRIES = create("ender_berries");
+	public static final ResourceKey<Item> THE_END_SUPPER = create("the_end_supper");
 
 	public static ResourceKey<Item> create(String name) {
 		return ResourceKey.create(Registries.ITEM, SugarMod.id(name));

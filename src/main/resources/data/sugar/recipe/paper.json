@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"LL"
+	],
+	"key": {
+		"L": "sugar:cane_leaves"
+	},
+	"result": {
+		"id": "minecraft:paper",
+		"count": 1
+	}
+}

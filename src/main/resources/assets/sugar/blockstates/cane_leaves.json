@@ -1,0 +1,9 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "sugar:block/cane_leaves"
+      }
+    }
+  ]
+}

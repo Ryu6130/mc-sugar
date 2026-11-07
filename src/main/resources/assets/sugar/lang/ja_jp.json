@@ -1,4 +1,5 @@
 {
+  "creativeTab.sugar": "砂糖MOD",
   "item.sugar.sugar_cube": "角砂糖",
   "block.sugar.sugar_cube": "角砂糖",
   "item.sugar.caramel": "キャラメル",
@@ -16,5 +17,11 @@
   "block.sugar.sugarrack": "シュガーラック",
   "item.sugar.sugarrack": "シュガーラック",
   "item.sugar.jet_boots": "ジェットブーツ",
-  "item.sugar.sugarite_ingot": "シュガライトインゴット"
+  "item.sugar.sugarite_ingot": "シュガライトインゴット",
+  "item.sugar.cane_log": "キビの原木",
+  "block.sugar.cane_log": "キビの原木",
+  "item.sugar.cane_leaves": "キビの葉",
+  "block.sugar.cane_leaves": "キビの葉",
+  "item.sugar.ender_berries": "エンダーベリー",
+  "item.sugar.the_end_supper": "ジ・エンドの晩餐"
 }

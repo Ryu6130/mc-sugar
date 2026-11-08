@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import sugar.block.ModBlocks;
+import sugar.entity.BerryGodRenderer;
 import sugar.entity.DesertDessertRenderer;
 import sugar.entity.ModEntityModelLayers;
 import sugar.entity.ModEntityTypes;
@@ -21,6 +22,7 @@ public class SugarClientMod implements ClientModInitializer {
 		ModEntityModelLayers.registerModelLayers();
         EntityRenderers.register(ModEntityTypes.DESERT_DESSERT, DesertDessertRenderer::new);
         EntityRenderers.register(ModEntityTypes.SUGARDIAN, SugardianRenderer::new);
+        EntityRenderers.register(ModEntityTypes.BERRY_GOD, BerryGodRenderer::new);
         JetManager.clientInitialize();
         ModBlocks.clientInitialize();
     }

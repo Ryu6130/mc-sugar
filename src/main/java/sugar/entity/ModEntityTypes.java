@@ -26,6 +26,14 @@ public class ModEntityTypes {
 				.notInPeaceful(),
 			Sugardian.createAttributes()
 	);
+	
+	public static final EntityType<BerryGod> BERRY_GOD = register(
+			ModEntityTypeIds.BERRY_GOD,
+			EntityType.Builder.<BerryGod>of(BerryGod::new, MobCategory.MONSTER)
+				.sized(1.5f, 2.5f)
+				.notInPeaceful(),
+			BerryGod.createAttributes()
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

@@ -26,12 +26,12 @@ public class SugardianModel extends EntityModel<SugardianRenderState> {
 	public void setupAnim(SugardianRenderState state) {
 		super.setupAnim(state);
 
-		if (state.attackAnimationState.isStarted()) {
-			this.attack.apply(state.attackAnimationState, state.ageInTicks);
-			return;
-		}
 		if (state.deathAnimationState.isStarted()) {
 			this.death.apply(state.deathAnimationState, state.ageInTicks);
+			return;
+		}
+		if (state.attackAnimationState.isStarted()) {
+			this.attack.apply(state.attackAnimationState, state.ageInTicks);
 			return;
 		}
 	

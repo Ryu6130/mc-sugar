@@ -34,6 +34,7 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.FLAME_BERRIES);
             output.accept(ModItems.ENDER_BERRIES);
             output.accept(ModItems.THE_END_SUPPER);
+            output.accept(ModItems.RAINBOW_SOUP);
             
             output.accept(ModItems.BIOPLASTIC);
             output.accept(ModItems.SUGAR_STORAGE);

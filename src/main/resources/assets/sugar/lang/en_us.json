@@ -27,5 +27,7 @@
   "item.sugar.sculk_berries": "Sculk Berries",
   "item.sugar.flame_berries": "Flame Berries",
   "item.sugar.frosted_berries": "Frosted Berries",
-  "item.sugar.ocean_berries": "Ocean Berries"
+  "item.sugar.ocean_berries": "Ocean Berries",
+  "entity.sugar.berry_god": "Berry God",
+  "item.sugar.rainbow_soup": "Rainbow Soup"
 }

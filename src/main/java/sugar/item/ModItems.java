@@ -124,6 +124,14 @@ public class ModItems {
         )
     );
 
+    public static final Item RAINBOW_SOUP = register(
+        ModItemIds.RAINBOW_SOUP,
+        Item::new,
+        new Item.Properties().stacksTo(1).food(
+            new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build()
+        ).usingConvertsTo(Items.BOWL)
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

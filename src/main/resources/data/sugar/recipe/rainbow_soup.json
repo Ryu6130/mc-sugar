@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"minecraft:sweet_berries",
+		"minecraft:glow_berries",
+		"sugar:sand_berry",
+		"sugar:frosted_berries",
+		"sugar:ocean_berries",
+		"sugar:sculk_berries",
+		"sugar:flame_berries",
+		"minecraft:bowl",
+		"sugar:ender_berries"
+	],
+	"result": {
+		"id": "sugar:rainbow_soup",
+		"count": 1
+	}
+}

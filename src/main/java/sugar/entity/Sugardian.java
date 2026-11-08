@@ -6,6 +6,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.SynchedEntityData.Builder;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
@@ -13,7 +14,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
@@ -42,34 +42,16 @@ public class Sugardian extends Monster {
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, false) {
             @Override
             protected void checkAndPerformAttack(LivingEntity target) {
-                if (this.canPerformAttack(target)) {
-                    if (chargeTicks.isEmpty()) {
-                        chargeTicks = OptionalInt.of(0);
-                        this.mob.getEntityData().set(ATTACKING, true);
-                    }
+                if (
+                    isWithinMeleeAttackRange(getTarget()) &&
+                    getSensing().hasLineOfSight(target) &&
+                    chargeTicks.isEmpty()
+                ) {
+                    chargeTicks = OptionalInt.of(0);
+                    this.mob.getEntityData().set(ATTACKING, true);
+                    this.resetAttackCooldown();
                 }
 
-                if (chargeTicks.isPresent()) {
-                    int ticks = chargeTicks.getAsInt() + 1;
-                    chargeTicks = OptionalInt.of(ticks);
-
-                    if (ticks == 22 && this.canPerformAttack(target)) {
-                        mob.doHurtTarget(Goal.getServerLevel(this.mob), target);
-                    }
-                    if (ticks >= 40) {
-                        chargeTicks = OptionalInt.empty();
-                        this.mob.getEntityData().set(ATTACKING, false);
-                        this.resetAttackCooldown();
-                    }
-                }
-            }
-
-            @Override
-            public void stop() {
-                super.stop();
-                
-                chargeTicks = OptionalInt.empty();
-                this.mob.getEntityData().set(ATTACKING, false);
             }
         });
         this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 0.5));
@@ -79,10 +61,17 @@ public class Sugardian extends Monster {
     @Override
     public void tick() {
         super.tick();
-        
-        if (getTarget() == null && chargeTicks.isPresent()) {
-            chargeTicks = OptionalInt.empty();
-            getEntityData().set(ATTACKING, false);
+        if (level() instanceof ServerLevel level && chargeTicks.isPresent()) {
+            int ticks = chargeTicks.getAsInt() + 1;
+            chargeTicks = OptionalInt.of(ticks);
+
+            if (ticks == 22 && getTarget() != null && isWithinMeleeAttackRange(getTarget())) {
+                doHurtTarget(level, getTarget());
+            }
+            if (ticks >= 40) {
+                chargeTicks = OptionalInt.empty();
+                entityData.set(ATTACKING, false);
+            }
         }
     }
 

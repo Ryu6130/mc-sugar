@@ -27,5 +27,7 @@
   "item.sugar.sculk_berries": "スカルクベリー",
   "item.sugar.flame_berries": "フレイムベリー",
   "item.sugar.frosted_berries": "フロストベリー",
-  "item.sugar.ocean_berries": "オーシャンベリー"
+  "item.sugar.ocean_berries": "オーシャンベリー",
+  "entity.sugar.berry_god": "ベリーゴッド",
+  "item.sugar.rainbow_soup": "レインボースープ"
 }

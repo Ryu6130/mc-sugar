@@ -11,3 +11,11 @@
 - **Caramel:** Made by roasting sugar. Might overlap with other mods, though, lol.
 
 And even more ~~strange~~ other features!
+
+## Issue Policy
+
+Bug reports are only accepted for the latest stable release.
+
+Issues reported on older versions, pre-releases, or experimental ports will be closed without support.
+
+Please update to the latest stable version before submitting an issue.

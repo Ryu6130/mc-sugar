@@ -19,3 +19,9 @@ Bug reports are only accepted for the latest stable release.
 Issues reported on older versions, pre-releases, or experimental ports will be closed without support.
 
 Please update to the latest stable version before submitting an issue.
+
+## Credits
+
+- **Original Mod Developer:** Ryu6130
+- **NeoForge Port:** kon3
+- **AI Assistance:** Used during parts of the porting process.

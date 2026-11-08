@@ -1,4 +1,4 @@
-# Sugar MOD
+# Sugar Mod
 
 *Note: AI was used in parts of this mod's development.*
 

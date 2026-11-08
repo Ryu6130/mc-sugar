@@ -10,7 +10,7 @@
 - **Konpeito:** A traditional Japanese sugar confection. Can be eaten quickly!
 - **Caramel:** Made by roasting sugar. Might overlap with other mods, though, lol.
 
-And even more ~~strange~~ other features!
+And even more ~~weird~~ features!
 
 ## Issue Policy
 

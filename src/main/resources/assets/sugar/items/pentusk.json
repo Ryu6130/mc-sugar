@@ -1,0 +1,37 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "cases": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "sugar:item/pentusk"
+        },
+        "when": [
+          "gui",
+          "ground",
+          "fixed"
+        ]
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:condition",
+      "on_false": {
+        "type": "minecraft:special",
+        "base": "sugar:item/pentusk_in_hand",
+        "model": {
+          "type": "sugar:pentusk"
+        }
+      },
+      "on_true": {
+        "type": "minecraft:special",
+        "base": "sugar:item/pentusk_throwing",
+        "model": {
+          "type": "sugar:pentusk"
+        }
+      },
+      "property": "minecraft:using_item"
+    },
+    "property": "minecraft:display_context"
+  }
+}

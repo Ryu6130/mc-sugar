@@ -46,6 +46,7 @@ public class ModCreativeModeTabs {
             output.accept(ModBlocks.DESUGARER);
 
             output.accept(ModItems.JET_BOOTS);
+            output.accept(ModItems.PENTUSK);
 
             output.accept(ModBlocks.CANE_LOG);
             output.accept(ModBlocks.CANE_LEAVES);

@@ -12,27 +12,33 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 
 public class ModEntityTypes {
 	public static final EntityType<DesertDessert> DESERT_DESSERT = register(
-			ModEntityTypeIds.DESERT_DESSERT,
-			EntityType.Builder.<DesertDessert>of(DesertDessert::new, MobCategory.MONSTER)
-				.sized(0.75f, 0.5f)
-				.notInPeaceful(),
-			DesertDessert.createAttributes()
+		ModEntityTypeIds.DESERT_DESSERT,
+		EntityType.Builder.<DesertDessert>of(DesertDessert::new, MobCategory.MONSTER)
+			.sized(0.75f, 0.5f)
+			.notInPeaceful(),
+		DesertDessert.createAttributes()
 	);
 	
 	public static final EntityType<Sugardian> SUGARDIAN = register(
-			ModEntityTypeIds.SUGARDIAN,
-			EntityType.Builder.<Sugardian>of(Sugardian::new, MobCategory.MONSTER)
-				.sized(2.5f, 3f)
-				.notInPeaceful(),
-			Sugardian.createAttributes()
+		ModEntityTypeIds.SUGARDIAN,
+		EntityType.Builder.<Sugardian>of(Sugardian::new, MobCategory.MONSTER)
+			.sized(2.5f, 3f)
+			.notInPeaceful(),
+		Sugardian.createAttributes()
 	);
 	
 	public static final EntityType<BerryGod> BERRY_GOD = register(
-			ModEntityTypeIds.BERRY_GOD,
-			EntityType.Builder.<BerryGod>of(BerryGod::new, MobCategory.MONSTER)
-				.sized(1.5f, 2.5f)
-				.notInPeaceful(),
-			BerryGod.createAttributes()
+		ModEntityTypeIds.BERRY_GOD,
+		EntityType.Builder.<BerryGod>of(BerryGod::new, MobCategory.MONSTER)
+			.sized(1.5f, 2.5f)
+			.notInPeaceful(),
+		BerryGod.createAttributes()
+	);
+	
+	public static final EntityType<PentuskEntity> PENTUSK = register(
+		ModEntityTypeIds.PENTUSK,
+		EntityType.Builder.<PentuskEntity>of(PentuskEntity::new, MobCategory.MISC)
+			.sized(0.5f, 0.5f)
 	);
 
 	private static <T extends Entity> EntityType<T> register(

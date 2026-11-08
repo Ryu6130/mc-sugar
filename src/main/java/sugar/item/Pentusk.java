@@ -1,0 +1,148 @@
+package sugar.item;
+
+import java.util.List;
+
+import net.minecraft.core.Direction;
+import net.minecraft.core.Holder;
+import net.minecraft.core.Position;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.stats.Stats;
+import net.minecraft.util.Mth;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.MoverType;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow.Pickup;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUseAnimation;
+import net.minecraft.world.item.ProjectileItem;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Tool;
+import net.minecraft.world.item.enchantment.EnchantmentEffectComponents;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
+import sugar.entity.PentuskEntity;
+
+public class Pentusk extends Item implements ProjectileItem {
+    public Pentusk(final Item.Properties properties) {
+        super(properties);
+    }
+
+    public static ItemAttributeModifiers createAttributes() {
+        return ItemAttributeModifiers.builder()
+            .add(
+                Attributes.ATTACK_DAMAGE,
+                new AttributeModifier(BASE_ATTACK_DAMAGE_ID, (double)8.0F, Operation.ADD_VALUE),
+                EquipmentSlotGroup.MAINHAND
+            ).add(
+                Attributes.ATTACK_SPEED,
+                new AttributeModifier(
+                    BASE_ATTACK_SPEED_ID,
+                    (double)-2.9F,
+                    Operation.ADD_VALUE
+                ),
+                EquipmentSlotGroup.MAINHAND
+            ).build();
+    }
+
+    public static Tool createToolProperties() {
+        return new Tool(List.of(), 1.0F, 2, false);
+    }
+
+    public ItemUseAnimation getUseAnimation(final ItemStack itemStack) {
+        return ItemUseAnimation.TRIDENT;
+    }
+
+    public int getUseDuration(final ItemStack itemStack, final LivingEntity user) {
+        return 72000;
+    }
+    
+    public boolean releaseUsing(final ItemStack itemStack, final Level level, final LivingEntity entity, final int remainingTime) {
+        if (entity instanceof Player player) {
+            int timeHeld = this.getUseDuration(itemStack, entity) - remainingTime;
+            if (timeHeld < 10) {
+                return false;
+            } else {
+                float riptideStrength = EnchantmentHelper.getTridentSpinAttackStrength(itemStack, player);
+                if (!(riptideStrength > 0.0F) || player.isInWaterOrRain() && !player.isPassenger()) {
+                    if (itemStack.nextDamageWillBreak()) {
+                        return false;
+                    } else {
+                        Holder<SoundEvent> sound = EnchantmentHelper.pickHighestLevel(itemStack, EnchantmentEffectComponents.TRIDENT_SOUND).orElse(SoundEvents.TRIDENT_THROW);
+                        player.awardStat(Stats.ITEM_USED.get(this));
+                        if (level instanceof ServerLevel) {
+                            ServerLevel serverLevel = (ServerLevel)level;
+                            itemStack.hurtWithoutBreaking(1, player);
+                            if (riptideStrength == 0.0F) {
+                                ItemStack thrownItemStack = itemStack.consumeAndReturn(1, player);
+                                PentuskEntity trident = Projectile.spawnProjectileFromRotation(PentuskEntity::new, serverLevel, thrownItemStack, player, 0.0F, 2.5F, 1.0F);
+                                if (player.hasInfiniteMaterials()) {
+                                trident.pickup = Pickup.CREATIVE_ONLY;
+                                }
+
+                                level.playSound((Entity)null, trident, (SoundEvent)sound.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                                return true;
+                            }
+                        }
+
+                        if (riptideStrength > 0.0F) {
+                            float yRot = player.getYRot();
+                            float xRot = player.getXRot();
+                            float xd = -Mth.sin((double)(yRot * ((float)Math.PI / 180F))) * Mth.cos((double)(xRot * ((float)Math.PI / 180F)));
+                            float yd = -Mth.sin((double)(xRot * ((float)Math.PI / 180F)));
+                            float zd = Mth.cos((double)(yRot * ((float)Math.PI / 180F))) * Mth.cos((double)(xRot * ((float)Math.PI / 180F)));
+                            float dist = Mth.sqrt(xd * xd + yd * yd + zd * zd);
+                            xd *= riptideStrength / dist;
+                            yd *= riptideStrength / dist;
+                            zd *= riptideStrength / dist;
+                            player.push((double)xd, (double)yd, (double)zd);
+                            player.startAutoSpinAttack(20, 8.0F, itemStack);
+                            if (player.onGround()) {
+                                player.move(MoverType.SELF, new Vec3((double)0.0F, (double)1.1999999F, (double)0.0F));
+                            }
+
+                            level.playSound((Entity)null, player, (SoundEvent)sound.value(), SoundSource.PLAYERS, 1.0F, 1.0F);
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }
+                } else {
+                    return false;
+                }
+            }
+        } else {
+            return false;
+        }
+    }
+
+    public InteractionResult use(final Level level, final Player player, final InteractionHand hand) {
+        ItemStack itemInHand = player.getItemInHand(hand);
+        if (itemInHand.nextDamageWillBreak()) {
+            return InteractionResult.FAIL;
+        } else if (EnchantmentHelper.getTridentSpinAttackStrength(itemInHand, player) > 0.0F && !player.isInWaterOrRain()) {
+            return InteractionResult.FAIL;
+        } else {
+            player.startUsingItem(hand);
+            return InteractionResult.CONSUME;
+        }
+    }
+
+    public Projectile asProjectile(final Level level, final Position position, final ItemStack itemStack, final Direction direction) {
+        PentuskEntity trident = new PentuskEntity(level, position.x(), position.y(), position.z(), itemStack.copyWithCount(1));
+        trident.pickup = Pickup.ALLOWED;
+        return trident;
+    }
+}

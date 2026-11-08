@@ -8,6 +8,7 @@ public class ModEntityModelLayers {
 	public static final ModelLayerLocation DESERT_DESSERT = createMain("desert_dessert");
 	public static final ModelLayerLocation SUGARDIAN = createMain("sugardian");
 	public static final ModelLayerLocation BERRY_GOD = createMain("berry_god");
+	public static final ModelLayerLocation PENTUSK = createMain("pentusk");
 
 	private static ModelLayerLocation createMain(String name) {
 		return new ModelLayerLocation(SugarMod.id(name), "main");
@@ -20,5 +21,7 @@ public class ModEntityModelLayers {
 			SugardianModel::getTexturedModelData);
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.BERRY_GOD,
 			BerryGodModel::getTexturedModelData);
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.PENTUSK,
+			PentuskModel::getTexturedModelData);
 	}
 }

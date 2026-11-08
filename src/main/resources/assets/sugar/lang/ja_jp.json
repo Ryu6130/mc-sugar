@@ -32,5 +32,7 @@
   "item.sugar.rainbow_soup": "レインボースープ",
   "item.sugar.sweetest_berries": "甘々ベリー",
   "effect.sugar.gaze_of_evil": "邪悪な視線",
-  "item.minecraft.potion.effect.gaze_of_evil": "邪神のポーション"
+  "item.minecraft.potion.effect.gaze_of_evil": "邪神のポーション",
+  "item.sugar.pentusk": "ペンタスク",
+  "entity.sugar.pentusk": "ペンタスク"
 }

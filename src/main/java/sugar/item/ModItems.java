@@ -3,6 +3,7 @@ package sugar.item;
 import java.util.function.Function;
 
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -10,8 +11,10 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TridentItem;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.component.Weapon;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.consume_effects.TeleportRandomlyConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -144,6 +147,16 @@ public class ModItems {
         )
     );
 
+    public static final Item PENTUSK = register(
+        ModItemIds.PENTUSK,
+        Pentusk::new,
+        new Item.Properties()
+            .durability(310)
+            .attributes(Pentusk.createAttributes())
+            .component(DataComponents.TOOL, Pentusk.createToolProperties())
+            .enchantable(1)
+            .component(DataComponents.WEAPON, new Weapon(1))
+    );
 
 	public static Item register(
         ResourceKey<Item> itemKey,

@@ -32,5 +32,7 @@
   "item.sugar.rainbow_soup": "Rainbow Soup",
   "item.sugar.sweetest_berries": "Sweetest Berries",
   "effect.sugar.gaze_of_evil": "Gaze of Evil",
-  "item.minecraft.potion.effect.gaze_of_evil": "Potion of Evil God"
+  "item.minecraft.potion.effect.gaze_of_evil": "Potion of Evil God",
+  "item.sugar.pentusk": "Pentusk",
+  "entity.sugar.pentusk": "Pentusk"
 }

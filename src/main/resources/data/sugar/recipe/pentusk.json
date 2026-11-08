@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"BTB",
+		"BSB",
+		" S "
+	],
+	"key": {
+		"B": "sugar:sweetest_berries",
+        "S": "sugar:sugarite_ingot",
+        "T": "minecraft:trident"
+	},
+	"result": {
+		"id": "sugar:pentusk",
+		"count": 1
+	}
+}

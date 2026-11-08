@@ -29,5 +29,8 @@
   "item.sugar.frosted_berries": "Frosted Berries",
   "item.sugar.ocean_berries": "Ocean Berries",
   "entity.sugar.berry_god": "Berry God",
-  "item.sugar.rainbow_soup": "Rainbow Soup"
+  "item.sugar.rainbow_soup": "Rainbow Soup",
+  "item.sugar.sweetest_berries": "Sweetest Berries",
+  "effect.sugar.gaze_of_evil": "Gaze of Evil",
+  "item.minecraft.potion.effect.gaze_of_evil": "Potion of Evil God"
 }

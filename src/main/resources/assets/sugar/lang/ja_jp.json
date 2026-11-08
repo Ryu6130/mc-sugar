@@ -29,5 +29,8 @@
   "item.sugar.frosted_berries": "フロストベリー",
   "item.sugar.ocean_berries": "オーシャンベリー",
   "entity.sugar.berry_god": "ベリーゴッド",
-  "item.sugar.rainbow_soup": "レインボースープ"
+  "item.sugar.rainbow_soup": "レインボースープ",
+  "item.sugar.sweetest_berries": "甘々ベリー",
+  "effect.sugar.gaze_of_evil": "邪悪な視線",
+  "item.minecraft.potion.effect.gaze_of_evil": "邪神のポーション"
 }

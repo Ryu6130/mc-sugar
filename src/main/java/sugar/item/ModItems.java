@@ -129,8 +129,21 @@ public class ModItems {
         Item::new,
         new Item.Properties().stacksTo(1).food(
             new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build()
-        ).usingConvertsTo(Items.BOWL)
+        ).usingConvertsTo(Items.BOWL).craftRemainder(Items.BOWL)
     );
+
+    public static final Item SWEETEST_BERRIES = register(
+        ModItemIds.SWEETEST_BERRIES,
+        Item::new,
+        new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(5).saturationModifier(0.6f).build(),
+            Consumables.defaultFood().onConsume(
+                new ApplyStatusEffectsConsumeEffect(
+                    new MobEffectInstance(MobEffects.REGENERATION, 200, 0), 1)
+                ).build()
+        )
+    );
+
 
 	public static Item register(
         ResourceKey<Item> itemKey,

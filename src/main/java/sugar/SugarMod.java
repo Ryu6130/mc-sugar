@@ -4,11 +4,13 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.Identifier;
 import sugar.block.ModBlocks;
 import sugar.blockentity.ModBlockEntityTypes;
+import sugar.effect.ModEffects;
 import sugar.entity.ModEntitySpawns;
 import sugar.entity.ModEntityTypes;
 import sugar.item.ModCreativeModeTabs;
 import sugar.item.ModDispenserBehaviors;
 import sugar.item.ModItems;
+import sugar.item.ModPotions;
 import sugar.menu.ModMenuTypes;
 import sugar.recipe.ModRecipes;
 
@@ -26,6 +28,8 @@ public class SugarMod implements ModInitializer {
         ModEntitySpawns.initialize();
         ModDispenserBehaviors.initialize();
         ModCreativeModeTabs.initialize();
+        ModEffects.initialize();
+        ModPotions.initialize();
     }
 
 	public static Identifier id(String path) {

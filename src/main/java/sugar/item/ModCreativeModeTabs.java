@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionContents;
 import sugar.SugarMod;
 import sugar.block.ModBlocks;
 
@@ -35,6 +36,8 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.ENDER_BERRIES);
             output.accept(ModItems.THE_END_SUPPER);
             output.accept(ModItems.RAINBOW_SOUP);
+            output.accept(ModItems.SWEETEST_BERRIES);
+            output.accept(PotionContents.createItemStack(Items.POTION, ModPotions.GAZE_OF_EVIL));
             
             output.accept(ModItems.BIOPLASTIC);
             output.accept(ModItems.SUGAR_STORAGE);

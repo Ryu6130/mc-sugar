@@ -1,13 +1,10 @@
 {
   "creativeTab.sugar": "砂糖MOD",
-  "item.sugar.sugar_cube": "角砂糖",
   "block.sugar.sugar_cube": "角砂糖",
   "item.sugar.caramel": "キャラメル",
   "item.sugar.konpeito": "金平糖",
   "block.sugar.konpeito_block": "金平糖ブロック",
-  "item.sugar.konpeito_block": "金平糖ブロック",
   "block.sugar.desugarer": "脱糖機",
-  "item.sugar.desugarer": "脱糖機",
   "item.sugar.bioplastic": "バイオプラスチック",
   "item.sugar.sugar_storage": "シュガーストレージ",
   "entity.sugar.desert_dessert": "デザート・デザート",
@@ -15,12 +12,9 @@
   "item.sugar.sugar_cell": "シュガーセル",
   "entity.sugar.sugardian": "シュガーディアン",
   "block.sugar.sugarrack": "シュガーラック",
-  "item.sugar.sugarrack": "シュガーラック",
   "item.sugar.jet_boots": "ジェットブーツ",
   "item.sugar.sugarite_ingot": "シュガライトインゴット",
-  "item.sugar.cane_log": "キビの原木",
   "block.sugar.cane_log": "キビの原木",
-  "item.sugar.cane_leaves": "キビの葉",
   "block.sugar.cane_leaves": "キビの葉",
   "item.sugar.ender_berries": "エンダーベリー",
   "item.sugar.the_end_supper": "ジ・エンドの晩餐",
@@ -34,5 +28,9 @@
   "effect.sugar.gaze_of_evil": "邪悪な視線",
   "item.minecraft.potion.effect.gaze_of_evil": "邪神のポーション",
   "item.sugar.pentusk": "ペンタスク",
-  "entity.sugar.pentusk": "ペンタスク"
+  "entity.sugar.pentusk": "ペンタスク",
+  "item.sugar.wow_bow": "ワンチェリー",
+  "item.sugar.molasses_bottle": "糖蜜入りの瓶",
+  "block.sugar.fermentation_tank": "発酵槽",
+  "item.sugar.rum_bottle": "ラム酒入りの瓶"
 }

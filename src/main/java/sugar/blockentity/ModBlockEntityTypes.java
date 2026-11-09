@@ -13,6 +13,9 @@ import sugar.block.ModBlocks;
 public class ModBlockEntityTypes {
     public static final BlockEntityType<DesugarerEntity> DESUGARER =
 		register("desugarer", DesugarerEntity::new, ModBlocks.DESUGARER);
+        
+    public static final BlockEntityType<FermentationTankEntity> FERMENTATION_TANK =
+		register("fermentation_tank", FermentationTankEntity::new, ModBlocks.FERMENTATION_TANK);
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
             String name,

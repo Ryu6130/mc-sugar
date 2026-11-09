@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "sugar:block/fermentation_tank",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "sugar:block/fermentation_tank",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "sugar:block/fermentation_tank",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "sugar:block/fermentation_tank",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "sugar:block/fermentation_tank"
+    },
+    "facing=west": {
+      "model": "sugar:block/fermentation_tank",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

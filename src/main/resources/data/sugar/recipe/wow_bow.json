@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" BS",
+		"BFS",
+		" BS"
+	],
+	"key": {
+		"F": "#minecraft:wolf_food",
+		"B": "minecraft:bone",
+		"S": "minecraft:string"
+	},
+	"result": {
+		"id": "sugar:wow_bow",
+		"count": 1
+	}
+}

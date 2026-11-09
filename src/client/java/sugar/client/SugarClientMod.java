@@ -15,6 +15,7 @@ import sugar.entity.PentuskSpecialRenderer;
 import sugar.entity.SugardianRenderer;
 import sugar.item.JetManager;
 import sugar.menu.DesugarerScreen;
+import sugar.menu.FermentationTankScreen;
 import sugar.menu.ModMenuTypes;
 import sugar.menu.SugarStorageScreen;
 
@@ -23,6 +24,7 @@ public class SugarClientMod implements ClientModInitializer {
     public void onInitializeClient() {
         MenuScreens.register(ModMenuTypes.DESUGARER, DesugarerScreen::new);
         MenuScreens.register(ModMenuTypes.SUGAR_STORAGE, SugarStorageScreen::new);
+        MenuScreens.register(ModMenuTypes.FERMENTATION_TANK, FermentationTankScreen::new);
 		ModEntityModelLayers.registerModelLayers();
         EntityRenderers.register(ModEntityTypes.DESERT_DESSERT, DesertDessertRenderer::new);
         EntityRenderers.register(ModEntityTypes.SUGARDIAN, SugardianRenderer::new);

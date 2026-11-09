@@ -6,16 +6,17 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.TridentItem;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.component.Weapon;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
+import net.minecraft.world.item.consume_effects.RemoveStatusEffectsConsumeEffect;
 import net.minecraft.world.item.consume_effects.TeleportRandomlyConsumeEffect;
 import net.minecraft.world.item.equipment.ArmorType;
 
@@ -131,7 +132,8 @@ public class ModItems {
         ModItemIds.RAINBOW_SOUP,
         Item::new,
         new Item.Properties().stacksTo(1).food(
-            new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build()
+            new FoodProperties.Builder().nutrition(10).saturationModifier(0.8f).build(),
+            Consumables.defaultDrink().build()
         ).usingConvertsTo(Items.BOWL).craftRemainder(Items.BOWL)
     );
 
@@ -156,6 +158,37 @@ public class ModItems {
             .component(DataComponents.TOOL, Pentusk.createToolProperties())
             .enchantable(1)
             .component(DataComponents.WEAPON, new Weapon(1))
+    );
+
+    public static final Item WOW_BOW = register(
+        ModItemIds.WOW_BOW,
+        WowBow::new,
+        new Item.Properties()
+            .durability(411)
+            .enchantable(1)
+    );
+
+    public static final Item MOLASSES_BOTTLE = register(
+        ModItemIds.MOLASSES_BOTTLE,
+        Item::new,
+        new Item.Properties().stacksTo(1).food(
+            new FoodProperties.Builder().nutrition(3).saturationModifier(0.6f).alwaysEdible().build(),
+            Consumables.defaultDrink().consumeSeconds(2.0F).sound(SoundEvents.HONEY_DRINK)
+                .onConsume(new RemoveStatusEffectsConsumeEffect(MobEffects.WITHER)).build()
+        ).usingConvertsTo(Items.GLASS_BOTTLE).craftRemainder(Items.GLASS_BOTTLE)
+    );
+
+    public static final Item RUM_BOTTLE = register(
+        ModItemIds.RUM_BOTTLE,
+        Item::new,
+        new Item.Properties().stacksTo(1).food(
+            new FoodProperties.Builder().nutrition(0).alwaysEdible().build(),
+            Consumables.defaultDrink().consumeSeconds(2.0F).sound(SoundEvents.HONEY_DRINK)
+                .onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                        new MobEffectInstance(MobEffects.NAUSEA, 120, 0), 1)
+                ).build()
+        ).usingConvertsTo(Items.GLASS_BOTTLE).craftRemainder(Items.GLASS_BOTTLE)
     );
 
 	public static Item register(

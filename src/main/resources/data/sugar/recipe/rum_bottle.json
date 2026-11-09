@@ -1,0 +1,9 @@
+{
+  "type": "sugar:fermenting",
+  "base": "sugar:molasses_bottle",
+  "starter": "minecraft:sugar_cane",
+  "time": 160,
+  "result": {
+    "id": "sugar:rum_bottle"
+  }
+}

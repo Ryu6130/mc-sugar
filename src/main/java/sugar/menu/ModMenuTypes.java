@@ -17,6 +17,8 @@ public class ModMenuTypes {
 			SugarStorageMenu::new,
 			ByteBufCodecs.VAR_INT
 		));
+	public static final MenuType<FermentationTankMenu> FERMENTATION_TANK =
+		register("fermentation_tank", FermentationTankMenu::new);
 
 	public static <T extends AbstractContainerMenu> MenuType<T> register(
         String name,

@@ -55,10 +55,24 @@ public class ModRecipes {
         SugarMod.id("clicking_entity"),
         new RecipeType<ClickingEntityRecipe>() { }
     );
+    
+    public static final RecipeSerializer<FermentingRecipe> FERMENTING_SERIALIZER = Registry.register(
+        BuiltInRegistries.RECIPE_SERIALIZER,
+        SugarMod.id("fermenting"),
+        new RecipeSerializer<>(FermentingRecipe.CODEC, FermentingRecipe.STREAM_CODEC)
+    );
+
+    public static final RecipeType<FermentingRecipe> FERMENTING = Registry.register(
+        BuiltInRegistries.RECIPE_TYPE,
+        SugarMod.id("fermenting"),
+        new RecipeType<FermentingRecipe>() { }
+    );
 
     public static void initialize() {
-        RecipeSynchronization.synchronizeRecipeSerializer(ModRecipes.DESUGARER_SERIALIZER);
-        RecipeSynchronization.synchronizeRecipeSerializer(ModRecipes.CLICKING_BLOCK_SERIALIZER);
+        RecipeSynchronization.synchronizeRecipeSerializer(DESUGARER_SERIALIZER);
+        RecipeSynchronization.synchronizeRecipeSerializer(CLICKING_BLOCK_SERIALIZER);
+        RecipeSynchronization.synchronizeRecipeSerializer(CLICKING_ENTITY_SERIALIZER);
+        RecipeSynchronization.synchronizeRecipeSerializer(FERMENTING_SERIALIZER);
         
         UseBlockCallback.EVENT.register((player, level, hand, hitResult) -> {
             ItemStack stack = player.getItemInHand(hand);

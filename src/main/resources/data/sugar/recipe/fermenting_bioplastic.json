@@ -1,0 +1,9 @@
+{
+  "type": "sugar:fermenting",
+  "base": "minecraft:sugar",
+  "starter": "minecraft:fermented_spider_eye",
+  "time": 160,
+  "result": {
+    "id": "sugar:bioplastic"
+  }
+}

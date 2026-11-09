@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "particle": "sugar:block/fermentation_tank_side",
+    "bottom": "minecraft:block/barrel_bottom",
+    "side": "sugar:block/fermentation_tank_side",
+    "top": "minecraft:block/barrel_top"
+  }
+}

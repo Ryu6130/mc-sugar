@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" P ",
+		"PBP",
+		" P "
+	],
+	"key": {
+		"P": "sugar:bioplastic",
+		"B": "minecraft:barrel"
+	},
+	"result": {
+		"id": "sugar:fermentation_tank",
+		"count": 1
+	}
+}

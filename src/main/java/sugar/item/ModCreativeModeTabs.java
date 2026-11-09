@@ -27,6 +27,8 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.CARAMEL);
             output.accept(ModItems.KONPEITO);
             output.accept(ModBlocks.KONPEITO_BLOCK);
+            output.accept(ModItems.MOLASSES_BOTTLE);
+            output.accept(ModItems.RUM_BOTTLE);
 
             output.accept(ModItems.SAND_BERRY);
             output.accept(ModItems.FROSTED_BERRIES);
@@ -44,7 +46,9 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.SUGAR_CELL);
 
             output.accept(ModBlocks.DESUGARER);
+            output.accept(ModBlocks.FERMENTATION_TANK);
 
+            output.accept(ModItems.WOW_BOW);
             output.accept(ModItems.JET_BOOTS);
             output.accept(ModItems.PENTUSK);
 

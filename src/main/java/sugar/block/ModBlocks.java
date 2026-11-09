@@ -87,6 +87,14 @@ public class ModBlocks {
 		(p) -> new TintedParticleLeavesBlock(0.01f, p),
 		Blocks.leavesProperties(SoundType.GRASS)
     );
+	
+    public static final Block FERMENTATION_TANK = register(
+		ModBlockItemIds.FERMENTATION_TANK,
+		FermentationTank::new,
+		BlockBehaviour.Properties.of()
+			.sound(SoundType.WOOD)
+			.strength(2f)
+    );
 
 	private static Block register(
         BlockItemId id,

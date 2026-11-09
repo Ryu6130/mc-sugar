@@ -11,6 +11,7 @@ public class ModBlockItemIds {
 	public static final BlockItemId SUGARRACK = create("sugarrack");
 	public static final BlockItemId CANE_LOG = create("cane_log");
 	public static final BlockItemId CANE_LEAVES = create("cane_leaves");
+	public static final BlockItemId FERMENTATION_TANK = create("fermentation_tank");
 
 	private static BlockItemId create(String name) {
 		Identifier id = SugarMod.id(name);

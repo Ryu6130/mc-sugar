@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/bow",
+  "textures": {
+    "layer0": "sugar:item/wow_bow_pulling_2"
+  }
+}

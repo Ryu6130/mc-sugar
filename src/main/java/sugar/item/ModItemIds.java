@@ -26,6 +26,7 @@ public class ModItemIds {
 	public static final ResourceKey<Item> WOW_BOW = create("wow_bow");
 	public static final ResourceKey<Item> MOLASSES_BOTTLE = create("molasses_bottle");
 	public static final ResourceKey<Item> RUM_BOTTLE = create("rum_bottle");
+	public static final ResourceKey<Item> NECTAR_BOTTLE = create("nectar_bottle");
 
 	public static ResourceKey<Item> create(String name) {
 		return ResourceKey.create(Registries.ITEM, SugarMod.id(name));

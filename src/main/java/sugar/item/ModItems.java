@@ -191,6 +191,28 @@ public class ModItems {
         ).usingConvertsTo(Items.GLASS_BOTTLE).craftRemainder(Items.GLASS_BOTTLE)
     );
 
+    public static final Item NECTAR_BOTTLE = register(
+        ModItemIds.NECTAR_BOTTLE,
+        Item::new,
+        new Item.Properties().stacksTo(1).food(
+            new FoodProperties.Builder().nutrition(7).saturationModifier(0.6f).alwaysEdible().build(),
+            Consumables.defaultDrink().consumeSeconds(2.0F).sound(SoundEvents.HONEY_DRINK)
+                .onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                        new MobEffectInstance(MobEffects.REGENERATION, 160, 1), 1)
+                ).onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                        new MobEffectInstance(MobEffects.ABSORPTION, 320, 2), 1)
+                ).onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                        new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0), 1)
+                ).onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                        new MobEffectInstance(MobEffects.NIGHT_VISION, 1000, 1), 1)
+                ).build()
+        ).usingConvertsTo(Items.GLASS_BOTTLE).craftRemainder(Items.GLASS_BOTTLE)
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

@@ -1,0 +1,13 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"sugar:rum_bottle",
+		"sugar:rainbow_soup",
+		"minecraft:golden_apple",
+		"minecraft:glass_bottle"
+	],
+	"result": {
+		"id": "sugar:nectar_bottle",
+		"count": 1
+	}
+}

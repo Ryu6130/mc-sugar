@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
             output.accept(ModBlocks.KONPEITO_BLOCK);
             output.accept(ModItems.MOLASSES_BOTTLE);
             output.accept(ModItems.RUM_BOTTLE);
+            output.accept(ModItems.NECTAR_BOTTLE);
 
             output.accept(ModItems.SAND_BERRY);
             output.accept(ModItems.FROSTED_BERRIES);

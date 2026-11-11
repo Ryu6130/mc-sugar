@@ -57,11 +57,10 @@ public class Sugardian extends Monster {
         this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 0.5));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
     }
-
+    
     @Override
-    public void tick() {
-        super.tick();
-        if (level() instanceof ServerLevel level && chargeTicks.isPresent()) {
+    public void customServerAiStep(ServerLevel level) {
+        if (chargeTicks.isPresent()) {
             int ticks = chargeTicks.getAsInt() + 1;
             chargeTicks = OptionalInt.of(ticks);
 

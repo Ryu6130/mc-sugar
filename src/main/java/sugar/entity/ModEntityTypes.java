@@ -40,6 +40,19 @@ public class ModEntityTypes {
 		EntityType.Builder.<PentuskEntity>of(PentuskEntity::new, MobCategory.MISC)
 			.sized(0.5f, 0.5f)
 	);
+	
+	public static final EntityType<HermitDragon> HERMIT_DRAGON = register(
+		ModEntityTypeIds.HERMIT_DRAGON,
+		EntityType.Builder.<HermitDragon>of(HermitDragon::new, MobCategory.MONSTER)
+			.sized(3f, 4.5f)
+			.notInPeaceful(),
+		HermitDragon.createAttributes()
+	);
+	
+	public static final EntityType<HermitDragonPart> HERMIT_DRAGON_PART = register(
+		ModEntityTypeIds.HERMIT_DRAGON_PART,
+		EntityType.Builder.<HermitDragonPart>of(HermitDragonPart::new, MobCategory.MISC)
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

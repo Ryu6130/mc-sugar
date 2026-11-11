@@ -63,51 +63,48 @@ public class BerryGod extends Monster {
         this.goalSelector.addGoal(3, new WaterAvoidingRandomStrollGoal(this, 0.8));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
     }
-
+    
     @Override
-    public void tick() {
-        super.tick();
-        if (level() instanceof ServerLevel level) {
-            if (chargeTicks.isEmpty()) {
+    public void customServerAiStep(ServerLevel level) {
+        if (chargeTicks.isEmpty()) {
+            entityData.set(ATTACKING, false);
+            entityData.set(SHOTING, false);
+        }
+        if (chargeTicks.isEmpty() && getTarget() != null && distanceTo(getTarget()) > 8) {
+            chargeTicks = OptionalInt.of(0);
+            entityData.set(SHOTING, true);
+        }
+        if (chargeTicks.isEmpty() && checkWalls(level, getAttackBoundingBox(1))) {
+            chargeTicks = OptionalInt.of(0);
+            entityData.set(ATTACKING, true);
+        }
+        if (chargeTicks.isPresent() && entityData.get(ATTACKING)) {
+            int ticks = chargeTicks.getAsInt() + 1;
+            chargeTicks = OptionalInt.of(ticks);
+
+            if (ticks == 18) {
+                if (getTarget() != null && this.isWithinMeleeAttackRange(getTarget()))
+                    doHurtTarget(level, getTarget());
+                removeWalls(level, getAttackBoundingBox(1.5));
+            }
+            if (ticks >= 30) {
+                chargeTicks = OptionalInt.empty();
                 entityData.set(ATTACKING, false);
+            }
+        }
+        if (chargeTicks.isPresent() && entityData.get(SHOTING)) {
+            int ticks = chargeTicks.getAsInt() + 1;
+            chargeTicks = OptionalInt.of(ticks);
+
+            if (ticks == 9) {
+                Vec3 pos = getEyePosition();
+                PrimedTnt tnt = new PrimedTnt(level, pos.x, pos.y, pos.z, this);
+                tnt.setDeltaMovement(getHeadLookAngle().scale(1));
+                level.addFreshEntity(tnt);
+            }
+            if (ticks >= 30) {
+                chargeTicks = OptionalInt.empty();
                 entityData.set(SHOTING, false);
-            }
-            if (chargeTicks.isEmpty() && getTarget() != null && distanceTo(getTarget()) > 8) {
-                chargeTicks = OptionalInt.of(0);
-                entityData.set(SHOTING, true);
-            }
-            if (chargeTicks.isEmpty() && checkWalls(level, getAttackBoundingBox(1))) {
-                chargeTicks = OptionalInt.of(0);
-                entityData.set(ATTACKING, true);
-            }
-            if (chargeTicks.isPresent() && entityData.get(ATTACKING)) {
-                int ticks = chargeTicks.getAsInt() + 1;
-                chargeTicks = OptionalInt.of(ticks);
-
-                if (ticks == 18) {
-                    if (getTarget() != null && this.isWithinMeleeAttackRange(getTarget()))
-                        doHurtTarget(level, getTarget());
-                    removeWalls(level, getAttackBoundingBox(1.5));
-                }
-                if (ticks >= 30) {
-                    chargeTicks = OptionalInt.empty();
-                    entityData.set(ATTACKING, false);
-                }
-            }
-            if (chargeTicks.isPresent() && entityData.get(SHOTING)) {
-                int ticks = chargeTicks.getAsInt() + 1;
-                chargeTicks = OptionalInt.of(ticks);
-
-                if (ticks == 9) {
-                    Vec3 pos = getEyePosition();
-                    PrimedTnt tnt = new PrimedTnt(level, pos.x, pos.y, pos.z, this);
-                    tnt.setDeltaMovement(getHeadLookAngle().scale(1));
-                    level.addFreshEntity(tnt);
-                }
-                if (ticks >= 30) {
-                    chargeTicks = OptionalInt.empty();
-                    entityData.set(SHOTING, false);
-                }
             }
         }
     }

@@ -33,5 +33,8 @@
   "item.sugar.molasses_bottle": "糖蜜入りの瓶",
   "block.sugar.fermentation_tank": "発酵槽",
   "item.sugar.rum_bottle": "ラム酒入りの瓶",
-  "item.sugar.nectar_bottle": "神酒入りの瓶"
+  "item.sugar.nectar_bottle": "神酒入りの瓶",
+  "entity.sugar.hermit_dragon": "仙竜",
+  "entity.sugar.hermit_dragon_part": "仙竜",
+  "item.sugar.hermit_dragon_scale": "仙竜の鱗"
 }

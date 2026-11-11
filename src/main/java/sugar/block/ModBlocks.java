@@ -94,6 +94,7 @@ public class ModBlocks {
 		BlockBehaviour.Properties.of()
 			.sound(SoundType.WOOD)
 			.strength(2f)
+			.pushReaction(PushReaction.IMMOVEABLE)
     );
 
 	private static Block register(

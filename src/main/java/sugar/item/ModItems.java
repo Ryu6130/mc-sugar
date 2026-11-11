@@ -213,6 +213,12 @@ public class ModItems {
         ).usingConvertsTo(Items.GLASS_BOTTLE).craftRemainder(Items.GLASS_BOTTLE)
     );
 
+    public static final Item HERMIT_DRAGON_SCALE = register(
+        ModItemIds.HERMIT_DRAGON_SCALE,
+        Item::new,
+        new Item.Properties()
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

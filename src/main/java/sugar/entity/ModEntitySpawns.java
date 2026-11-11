@@ -24,5 +24,27 @@ public class ModEntitySpawns {
             1,
             1 
         );
+        SpawnPlacements.register(
+            ModEntityTypes.HERMIT_DRAGON,
+            SpawnPlacementTypes.ON_GROUND,
+            Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+            HermitDragon::checkSpawnRules
+        );
+        BiomeModifications.addSpawn(
+            BiomeSelectors.includeByKey(
+                Biomes.WINDSWEPT_HILLS,
+                Biomes.WINDSWEPT_GRAVELLY_HILLS,
+                Biomes.WINDSWEPT_FOREST,
+                Biomes.WINDSWEPT_SAVANNA,
+                Biomes.MEADOW,
+                Biomes.STONY_PEAKS,
+                Biomes.JAGGED_PEAKS
+            ),
+            MobCategory.MONSTER,
+            ModEntityTypes.HERMIT_DRAGON,
+            2,
+            1,
+            1 
+        );
     }
 }

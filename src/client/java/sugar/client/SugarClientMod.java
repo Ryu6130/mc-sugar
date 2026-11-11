@@ -3,11 +3,13 @@ package sugar.client;
 import net.fabricmc.api.ClientModInitializer;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.special.SpecialModelRenderers;
 import sugar.SugarMod;
 import sugar.block.ModBlocks;
 import sugar.entity.BerryGodRenderer;
 import sugar.entity.DesertDessertRenderer;
+import sugar.entity.HermitDragonRenderer;
 import sugar.entity.ModEntityModelLayers;
 import sugar.entity.ModEntityTypes;
 import sugar.entity.PentuskRenderer;
@@ -30,6 +32,8 @@ public class SugarClientMod implements ClientModInitializer {
         EntityRenderers.register(ModEntityTypes.SUGARDIAN, SugardianRenderer::new);
         EntityRenderers.register(ModEntityTypes.BERRY_GOD, BerryGodRenderer::new);
         EntityRenderers.register(ModEntityTypes.PENTUSK, PentuskRenderer::new);
+        EntityRenderers.register(ModEntityTypes.HERMIT_DRAGON, HermitDragonRenderer::new);
+        EntityRenderers.register(ModEntityTypes.HERMIT_DRAGON_PART, NoopRenderer::new);
         SpecialModelRenderers.ID_MAPPER.put(
             SugarMod.id("pentusk"),
             PentuskSpecialRenderer.Unbaked.MAP_CODEC

@@ -31,6 +31,9 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.RUM_BOTTLE);
             output.accept(ModItems.NECTAR_BOTTLE);
             
+            output.accept(ModItems.VOID);
+            output.accept(ModItems.FLAGLESS);
+
             output.accept(ModItems.HERMIT_DRAGON_SCALE);
 
             output.accept(ModItems.SAND_BERRY);

@@ -36,5 +36,7 @@
   "item.sugar.nectar_bottle": "Nectar Bottle",
   "entity.sugar.hermit_dragon": "Hermit Dragon",
   "entity.sugar.hermit_dragon_part": "Hermit Dragon",
-  "item.sugar.hermit_dragon_scale": "Hermit Dragon Scale"
+  "item.sugar.hermit_dragon_scale": "Hermit Dragon Scale",
+  "item.sugar.void": "Void",
+  "item.sugar.flagless": "Flagless"
 }

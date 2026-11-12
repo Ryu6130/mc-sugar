@@ -1,0 +1,9 @@
+{
+  "type": "sugar:desugaring",
+  "ingredient": "sugar:sugar_cube",
+  "time": 160,
+  "result": {
+    "id": "sugar:void",
+    "count": 4
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "sugar:desugaring",
+  "ingredient": "minecraft:sugar",
+  "time": 160,
+  "result": {
+    "id": "sugar:void",
+    "count": 1
+  }
+}

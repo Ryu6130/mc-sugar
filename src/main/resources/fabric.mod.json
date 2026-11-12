@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "sugar",
-  "version": "0.5.0",
+  "version": "0.5.1",
 
   "name": "Sugar Mod",
   "description": "This is a sweetest.",
@@ -26,6 +26,13 @@
       "sugar.SugarMod"
     ]
   },
+
+  "mixins": [
+    {
+      "config": "sugar.client.mixins.json",
+      "environment": "client"
+    }
+  ],
 
   "depends": {
     "fabricloader": ">=0.15.10",

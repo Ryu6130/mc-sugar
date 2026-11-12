@@ -16,6 +16,7 @@ import sugar.entity.PentuskRenderer;
 import sugar.entity.PentuskSpecialRenderer;
 import sugar.entity.SugardianRenderer;
 import sugar.item.JetManager;
+import sugar.item.MultiAttackManager;
 import sugar.menu.DesugarerScreen;
 import sugar.menu.FermentationTankScreen;
 import sugar.menu.ModMenuTypes;
@@ -39,6 +40,7 @@ public class SugarClientMod implements ClientModInitializer {
             PentuskSpecialRenderer.Unbaked.MAP_CODEC
         );
         JetManager.clientInitialize();
+        MultiAttackManager.clientInitialize();
         ModBlocks.clientInitialize();
     }
 }

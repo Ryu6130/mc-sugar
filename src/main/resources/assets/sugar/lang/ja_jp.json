@@ -36,5 +36,7 @@
   "item.sugar.nectar_bottle": "神酒入りの瓶",
   "entity.sugar.hermit_dragon": "仙竜",
   "entity.sugar.hermit_dragon_part": "仙竜",
-  "item.sugar.hermit_dragon_scale": "仙竜の鱗"
+  "item.sugar.hermit_dragon_scale": "仙竜の鱗",
+  "item.sugar.void": "空虚",
+  "item.sugar.flagless": "フラグレス"
 }

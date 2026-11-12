@@ -9,11 +9,15 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.component.Weapon;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.consume_effects.RemoveStatusEffectsConsumeEffect;
@@ -69,8 +73,8 @@ public class ModItems {
     public static final Item JET_BOOTS = register(
         ModItemIds.JET_BOOTS,
         Item::new,
-        new Item.Properties().humanoidArmor(ModArmors.JET_BOOTS, ArmorType.BOOTS)
-            .durability(ArmorType.HELMET.getDurability(ModArmors.JET_BOOTS.durability()))
+        new Item.Properties().humanoidArmor(ModMaterials.JET_BOOTS, ArmorType.BOOTS)
+            .durability(ArmorType.HELMET.getDurability(ModMaterials.JET_BOOTS.durability()))
     );
 
     public static final Item ENDER_BERRIES = register(
@@ -219,6 +223,37 @@ public class ModItems {
         new Item.Properties()
     );
 
+    public static final Item VOID = register(
+        ModItemIds.VOID,
+        Item::new,
+        new Item.Properties()
+    );
+
+    public static final Item FLAGLESS = register(
+        ModItemIds.FLAGLESS,
+        Item::new,
+        new Item.Properties().durability(1111).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.ATTACK_DAMAGE,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_DAMAGE_ID,
+                        3.0,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ATTACK_SPEED,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_SPEED_ID,
+                        -2.4,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).build()
+        )
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,
@@ -233,5 +268,6 @@ public class ModItems {
 
     public static void initialize() {
         JetManager.initialize();
+        MultiAttackManager.initialize();
     }
 }

@@ -38,5 +38,7 @@
   "entity.sugar.hermit_dragon_part": "仙竜",
   "item.sugar.hermit_dragon_scale": "仙竜の鱗",
   "item.sugar.void": "空虚",
-  "item.sugar.flagless": "フラグレス"
+  "item.sugar.flagless": "フラグレス",
+  "block.sugar.sugar_clod": "砂糖の土塊",
+  "entity.sugar.sweeper": "スウィーパー"
 }

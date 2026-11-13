@@ -7,6 +7,7 @@ import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.Heightmap;
+import sugar.worldgen.ModBiomeIds;
 
 public class ModEntitySpawns {
     public static void initialize() {
@@ -45,6 +46,22 @@ public class ModEntitySpawns {
             2,
             1,
             1 
+        );
+        SpawnPlacements.register(
+            ModEntityTypes.SWEEPER,
+            SpawnPlacementTypes.ON_GROUND,
+            Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+            Sweeper::checkSpawnRules
+        );
+        BiomeModifications.addSpawn(
+            BiomeSelectors.includeByKey(
+                ModBiomeIds.SUGAR_FOREST
+            ),
+            MobCategory.MONSTER,
+            ModEntityTypes.SWEEPER,
+            50,
+            1,
+            3 
         );
     }
 }

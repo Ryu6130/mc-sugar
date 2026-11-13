@@ -10,7 +10,7 @@ public class HermitDragonRenderer extends MobRenderer<HermitDragon, HermitDragon
         SugarMod.id("textures/entity/hermit_dragon.png");
 
 	public HermitDragonRenderer(EntityRendererProvider.Context context) {
-		super(context, new HermitDragonModel(context.bakeLayer(ModEntityModelLayers.HERMIT_DRAGON)), 2f);
+		super(context, new HermitDragonModel(context.bakeLayer(ModEntityModelLayers.HERMIT_DRAGON)), 3f);
 	}
 
     @Override

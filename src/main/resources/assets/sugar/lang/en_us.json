@@ -38,5 +38,7 @@
   "entity.sugar.hermit_dragon_part": "Hermit Dragon",
   "item.sugar.hermit_dragon_scale": "Hermit Dragon Scale",
   "item.sugar.void": "Void",
-  "item.sugar.flagless": "Flagless"
+  "item.sugar.flagless": "Flagless",
+  "block.sugar.sugar_clod": "Sugar Clod",
+  "entity.sugar.sweeper": "Sweeper"
 }

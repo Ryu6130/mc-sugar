@@ -9,7 +9,7 @@ public class BerryGodRenderer extends MobRenderer<BerryGod, BerryGodRenderState,
 	private static final Identifier TEXTURE = SugarMod.id("textures/entity/berry_god.png");
 
 	public BerryGodRenderer(EntityRendererProvider.Context context) {
-		super(context, new BerryGodModel(context.bakeLayer(ModEntityModelLayers.BERRY_GOD)), 2f);
+		super(context, new BerryGodModel(context.bakeLayer(ModEntityModelLayers.BERRY_GOD)), 1.5f);
 	}
 
     @Override

@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
         .title(Component.translatable("creativeTab.sugar"))
         .displayItems((params, output) -> {
             output.accept(ModBlocks.SUGAR_CUBE);
+            output.accept(ModBlocks.SUGAR_CLOD);
             output.accept(ModBlocks.SUGARRACK);
             output.accept(ModItems.SUGARITE_INGOT);
 

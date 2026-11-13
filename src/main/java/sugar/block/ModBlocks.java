@@ -96,6 +96,14 @@ public class ModBlocks {
 			.strength(2f)
 			.pushReaction(PushReaction.IMMOVEABLE)
     );
+	
+    public static final Block SUGAR_CLOD = register(
+		ModBlockItemIds.SUGAR_CLOD,
+		Block::new,
+		BlockBehaviour.Properties.of()
+			.sound(SoundType.GRAVEL)
+			.strength(0.5f)
+    );
 
 	private static Block register(
         BlockItemId id,
@@ -142,23 +150,5 @@ public class ModBlocks {
 	}
 
     public static void initialize() {
-		BiomeModifications.addFeature(
-			BiomeSelectors.includeByKey(
-				Biomes.PLAINS,
-				Biomes.FOREST,
-				Biomes.BIRCH_FOREST,
-				Biomes.JUNGLE,
-				Biomes.SPARSE_JUNGLE,
-				Biomes.BAMBOO_JUNGLE,
-				Biomes.SAVANNA,
-				Biomes.SAVANNA_PLATEAU,
-				Biomes.WINDSWEPT_SAVANNA
-			),
-			GenerationStep.Decoration.VEGETAL_DECORATION,
-			ResourceKey.create(
-				Registries.PLACED_FEATURE,
-				SugarMod.id("cane_tree")
-			)
-		);
 	}
 }

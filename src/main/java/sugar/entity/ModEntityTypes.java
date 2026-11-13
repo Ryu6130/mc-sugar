@@ -53,6 +53,12 @@ public class ModEntityTypes {
 		ModEntityTypeIds.HERMIT_DRAGON_PART,
 		EntityType.Builder.<HermitDragonPart>of(HermitDragonPart::new, MobCategory.MISC)
 	);
+	
+	public static final EntityType<Sweeper> SWEEPER = register(
+		ModEntityTypeIds.SWEEPER,
+		EntityType.Builder.<Sweeper>of(Sweeper::new, MobCategory.MONSTER),
+		Sweeper.createAttributes()
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

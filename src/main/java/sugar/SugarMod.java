@@ -14,6 +14,7 @@ import sugar.item.ModPotions;
 import sugar.menu.ModMenuTypes;
 import sugar.recipe.ModRecipes;
 import sugar.render.FirstPersonAnimationRegistry;
+import sugar.worldgen.ModWorldgen;
 
 public class SugarMod implements ModInitializer {
 	public static final String MOD_ID = "sugar";
@@ -32,6 +33,7 @@ public class SugarMod implements ModInitializer {
         ModEffects.initialize();
         ModPotions.initialize();
         FirstPersonAnimationRegistry.initialize();
+        ModWorldgen.initialize();
     }
 
 	public static Identifier id(String path) {

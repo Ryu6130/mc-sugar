@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.special.SpecialModelRenderers;
 import sugar.SugarMod;
 import sugar.block.ModBlocks;
 import sugar.entity.BerryGodRenderer;
+import sugar.entity.BlackHoleRenderer;
 import sugar.entity.CandiedRenderer;
 import sugar.entity.DesertDessertRenderer;
 import sugar.entity.HermitDragonRenderer;
@@ -39,6 +40,7 @@ public class SugarClientMod implements ClientModInitializer {
         EntityRenderers.register(ModEntityTypes.HERMIT_DRAGON_PART, NoopRenderer::new);
         EntityRenderers.register(ModEntityTypes.SWEEPER, SweeperRenderer::new);
         EntityRenderers.register(ModEntityTypes.CANDIED, CandiedRenderer::new);
+        EntityRenderers.register(ModEntityTypes.BLACK_HOLE, BlackHoleRenderer::new);
         SpecialModelRenderers.ID_MAPPER.put(
             SugarMod.id("pentusk"),
             PentuskSpecialRenderer.Unbaked.MAP_CODEC

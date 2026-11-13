@@ -42,5 +42,8 @@
   "block.sugar.sugar_clod": "砂糖の土塊",
   "entity.sugar.sweeper": "スウィーパー",
   "entity.sugar.candied": "キャンデッド",
-  "item.sugar.sugar_waxed_pemmican": "糖衣したペミカン"
+  "item.sugar.sugar_waxed_pemmican": "糖衣されたペミカン",
+  "item.sugar.just_nil": "ジャスト・ニル",
+  "item.sugar.even_lightoo": "イーブン・ライトゥ",
+  "entity.sugar.black_hole": "ブラックホール"
 }

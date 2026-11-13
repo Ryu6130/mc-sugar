@@ -42,5 +42,8 @@
   "block.sugar.sugar_clod": "Sugar Clod",
   "entity.sugar.sweeper": "Sweeper",
   "entity.sugar.candied": "Candied",
-  "item.sugar.sugar_waxed_pemmican": "Sugar-Waxed Pemmican"
+  "item.sugar.sugar_waxed_pemmican": "Sugar-Waxed Pemmican",
+  "item.sugar.just_nil": "Just Nil",
+  "item.sugar.even_lightoo": "Even-Lightoo",
+  "entity.sugar.black_hole": "Black Hole"
 }

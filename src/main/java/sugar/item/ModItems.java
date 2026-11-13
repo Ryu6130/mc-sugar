@@ -232,7 +232,7 @@ public class ModItems {
     public static final Item FLAGLESS = register(
         ModItemIds.FLAGLESS,
         Item::new,
-        new Item.Properties().durability(1111).attributes(
+        new Item.Properties().durability(333).enchantable(17).attributes(
             ItemAttributeModifiers.builder()
                 .add(
                     Attributes.ATTACK_DAMAGE,
@@ -246,7 +246,7 @@ public class ModItems {
                     Attributes.ATTACK_SPEED,
                     new AttributeModifier(
                         Item.BASE_ATTACK_SPEED_ID,
-                        -2.4,
+                        -2.2,
                         AttributeModifier.Operation.ADD_VALUE
                     ),
                     EquipmentSlotGroup.MAINHAND
@@ -261,6 +261,37 @@ public class ModItems {
             new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build(),
             Consumables.defaultFood().consumeSeconds(1.2f).build()
         )
+    );
+
+    public static final Item JUST_NIL = register(
+        ModItemIds.JUST_NIL,
+        Item::new,
+        new Item.Properties().durability(333).enchantable(17).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.ATTACK_DAMAGE,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_DAMAGE_ID,
+                        4.5,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ATTACK_SPEED,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_SPEED_ID,
+                        -1.9,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).build()
+        ).component(DataComponents.WEAPON, new Weapon(1))
+    );
+
+    public static final Item EVEN_LIGHTOO = register(
+        ModItemIds.EVEN_LIGHTOO,
+        EvenLightoo::new,
+        new Item.Properties().durability(333).enchantable(17)
     );
 
 	public static Item register(

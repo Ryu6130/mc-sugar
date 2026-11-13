@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "sugar:flagless"
+    "sugar:flagless",
+    "sugar:just_nil"
   ]
 }

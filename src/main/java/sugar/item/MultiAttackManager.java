@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
@@ -81,6 +82,9 @@ public class MultiAttackManager {
                             (float)player.getAttributeValue(Attributes.ATTACK_DAMAGE)
                         );
                     }
+                }
+                if (!hitEntities.isEmpty()) {
+                    item.hurtAndBreak(1, player, EquipmentSlot.MAINHAND);
                 }
             }
         );

@@ -16,6 +16,7 @@ public class ModEntityModelLayers {
 	public static final ModelLayerLocation HERMIT_DRAGON = createMain("hermit_dragon");
 	public static final ModelLayerLocation SWEEPER = createMain("sweeper");
 	public static final ModelLayerLocation CANDIED = createMain("candied");
+	public static final ModelLayerLocation BLACK_HOLE = createMain("black_hole");
 
 	private static ModelLayerLocation createMain(String name) {
 		return new ModelLayerLocation(SugarMod.id(name), "main");
@@ -36,5 +37,7 @@ public class ModEntityModelLayers {
 			() -> CreeperModel.createBodyLayer(CubeDeformation.NONE));
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.CANDIED,
 			() -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0), 64, 64));
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.BLACK_HOLE,
+			BlackHoleModel::createBodyLayer);
 	}
 }

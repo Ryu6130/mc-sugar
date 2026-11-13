@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"VVV",
+		"  C",
+		"  C"
+	],
+	"key": {
+		"C": "sugar:cane_log",
+		"V": "sugar:void"
+	},
+	"result": {
+		"id": "sugar:just_nil",
+		"count": 1
+	}
+}

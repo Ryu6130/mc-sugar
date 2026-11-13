@@ -31,6 +31,8 @@ public class ModItemIds {
 	public static final ResourceKey<Item> VOID = create("void");
 	public static final ResourceKey<Item> FLAGLESS = create("flagless");
 	public static final ResourceKey<Item> SUGAR_WAXED_PEMMICAN = create("sugar_waxed_pemmican");
+	public static final ResourceKey<Item> JUST_NIL = create("just_nil");
+	public static final ResourceKey<Item> EVEN_LIGHTOO = create("even_lightoo");
 
 	public static ResourceKey<Item> create(String name) {
 		return ResourceKey.create(Registries.ITEM, SugarMod.id(name));

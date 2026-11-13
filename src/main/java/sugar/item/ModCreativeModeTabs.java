@@ -35,6 +35,8 @@ public class ModCreativeModeTabs {
             
             output.accept(ModItems.VOID);
             output.accept(ModItems.FLAGLESS);
+            output.accept(ModItems.JUST_NIL);
+            output.accept(ModItems.EVEN_LIGHTOO);
 
             output.accept(ModItems.HERMIT_DRAGON_SCALE);
 

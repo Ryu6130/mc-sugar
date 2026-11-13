@@ -74,6 +74,12 @@ public class ModEntityTypes {
 			.notInPeaceful(),
 		Candied.createAttributes()
 	);
+	
+	public static final EntityType<BlackHole> BLACK_HOLE = register(
+		ModEntityTypeIds.BLACK_HOLE,
+		EntityType.Builder.<BlackHole>of(BlackHole::new, MobCategory.MISC)
+			.sized(0.5F, 0.5F)
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

@@ -254,6 +254,15 @@ public class ModItems {
         )
     );
 
+    public static final Item SUGAR_WAXED_PEMMICAN = register(
+        ModItemIds.SUGAR_WAXED_PEMMICAN,
+        Item::new,
+        new Item.Properties().food(
+            new FoodProperties.Builder().nutrition(6).saturationModifier(0.8f).build(),
+            Consumables.defaultFood().consumeSeconds(1.2f).build()
+        )
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

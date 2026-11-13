@@ -13,6 +13,7 @@ public class ModEntityTypeIds {
 	public static ResourceKey<EntityType<?>> HERMIT_DRAGON = create("hermit_dragon");
 	public static ResourceKey<EntityType<?>> HERMIT_DRAGON_PART = create("hermit_dragon_part");
 	public static ResourceKey<EntityType<?>> SWEEPER = create("sweeper");
+	public static ResourceKey<EntityType<?>> CANDIED = create("candied");
 
 	private static ResourceKey<EntityType<?>> create(String name) {
 		return ResourceKey.create(Registries.ENTITY_TYPE, SugarMod.id(name));

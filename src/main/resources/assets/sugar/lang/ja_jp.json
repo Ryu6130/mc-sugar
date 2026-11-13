@@ -40,5 +40,7 @@
   "item.sugar.void": "空虚",
   "item.sugar.flagless": "フラグレス",
   "block.sugar.sugar_clod": "砂糖の土塊",
-  "entity.sugar.sweeper": "スウィーパー"
+  "entity.sugar.sweeper": "スウィーパー",
+  "entity.sugar.candied": "キャンデッド",
+  "item.sugar.sugar_waxed_pemmican": "糖衣したペミカン"
 }

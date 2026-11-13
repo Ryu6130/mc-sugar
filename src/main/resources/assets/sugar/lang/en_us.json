@@ -40,5 +40,7 @@
   "item.sugar.void": "Void",
   "item.sugar.flagless": "Flagless",
   "block.sugar.sugar_clod": "Sugar Clod",
-  "entity.sugar.sweeper": "Sweeper"
+  "entity.sugar.sweeper": "Sweeper",
+  "entity.sugar.candied": "Candied",
+  "item.sugar.sugar_waxed_pemmican": "Sugar-Waxed Pemmican"
 }

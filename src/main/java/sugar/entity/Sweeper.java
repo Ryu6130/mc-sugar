@@ -40,9 +40,9 @@ public class Sweeper extends Creeper {
         return true;
     }
 
-   public static AttributeSupplier.Builder createAttributes() {
-      return Creeper.createAttributes()
-        .add(Attributes.MOVEMENT_SPEED, 0.3)
-        .add(Attributes.STEP_HEIGHT, 1.2);
-   }
+    public static AttributeSupplier.Builder createAttributes() {
+        return Creeper.createAttributes()
+            .add(Attributes.MOVEMENT_SPEED, 0.3)
+            .add(Attributes.STEP_HEIGHT, 1.2);
+    }
 }

@@ -61,7 +61,23 @@ public class ModEntitySpawns {
             ModEntityTypes.SWEEPER,
             50,
             1,
-            3 
+            3
+        );
+        SpawnPlacements.register(
+            ModEntityTypes.CANDIED,
+            SpawnPlacementTypes.ON_GROUND,
+            Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+            Candied::checkSpawnRules
+        );
+        BiomeModifications.addSpawn(
+            BiomeSelectors.includeByKey(
+                ModBiomeIds.SUGAR_FOREST
+            ),
+            MobCategory.MONSTER,
+            ModEntityTypes.CANDIED,
+            80,
+            1,
+            4
         );
     }
 }

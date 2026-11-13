@@ -56,8 +56,23 @@ public class ModEntityTypes {
 	
 	public static final EntityType<Sweeper> SWEEPER = register(
 		ModEntityTypeIds.SWEEPER,
-		EntityType.Builder.<Sweeper>of(Sweeper::new, MobCategory.MONSTER),
+		EntityType.Builder.<Sweeper>of(Sweeper::new, MobCategory.MONSTER)
+			.sized(0.6F, 1.7F)
+			.clientTrackingRange(8)
+			.notInPeaceful(),
 		Sweeper.createAttributes()
+	);
+	
+	public static final EntityType<Candied> CANDIED = register(
+		ModEntityTypeIds.CANDIED,
+		EntityType.Builder.<Candied>of(Candied::new, MobCategory.MONSTER)
+			.sized(0.6F, 1.95F)
+			.eyeHeight(1.74F)
+			.passengerAttachments(new float[]{2.0125F})
+			.ridingOffset(-0.7F)
+			.clientTrackingRange(8)
+			.notInPeaceful(),
+		Candied.createAttributes()
 	);
 
 	private static <T extends Entity> EntityType<T> register(

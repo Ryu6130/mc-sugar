@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.MOLASSES_BOTTLE);
             output.accept(ModItems.RUM_BOTTLE);
             output.accept(ModItems.NECTAR_BOTTLE);
+            output.accept(ModItems.SUGAR_WAXED_PEMMICAN);
             
             output.accept(ModItems.VOID);
             output.accept(ModItems.FLAGLESS);

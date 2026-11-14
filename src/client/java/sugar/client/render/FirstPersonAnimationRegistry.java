@@ -1,4 +1,4 @@
-package sugar.render;
+package sugar.client.render;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -7,6 +7,7 @@ import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.special.SpecialModelRenderers;
 import sugar.SugarMod;
 import sugar.block.ModBlocks;
+import sugar.client.render.FirstPersonAnimationRegistry;
 import sugar.entity.BerryGodRenderer;
 import sugar.entity.BlackHoleRenderer;
 import sugar.entity.CandiedRenderer;
@@ -48,5 +49,6 @@ public class SugarClientMod implements ClientModInitializer {
         JetManager.clientInitialize();
         MultiAttackManager.clientInitialize();
         ModBlocks.clientInitialize();
+        FirstPersonAnimationRegistry.initialize();
     }
 }

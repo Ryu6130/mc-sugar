@@ -13,7 +13,6 @@ import sugar.item.ModItems;
 import sugar.item.ModPotions;
 import sugar.menu.ModMenuTypes;
 import sugar.recipe.ModRecipes;
-import sugar.render.FirstPersonAnimationRegistry;
 import sugar.worldgen.ModWorldgen;
 
 public class SugarMod implements ModInitializer {
@@ -32,7 +31,6 @@ public class SugarMod implements ModInitializer {
         ModCreativeModeTabs.initialize();
         ModEffects.initialize();
         ModPotions.initialize();
-        FirstPersonAnimationRegistry.initialize();
         ModWorldgen.initialize();
     }
 

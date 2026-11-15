@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"G G",
+		"GGG",
+		"GGG"
+	],
+	"key": {
+		"G": "sugar:gummy"
+	},
+	"result": {
+		"id": "sugar:gummy_chestplate",
+		"count": 1
+	}
+}

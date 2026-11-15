@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"G G",
+		"G G"
+	],
+	"key": {
+		"G": "sugar:gummy"
+	},
+	"result": {
+		"id": "sugar:gummy_boots",
+		"count": 1
+	}
+}

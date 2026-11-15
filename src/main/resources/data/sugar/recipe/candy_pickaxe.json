@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"CCC",
+		" S ",
+		" S "
+	],
+	"key": {
+		"C": "sugar:candy",
+		"S": "minecraft:stick"
+	},
+	"result": {
+		"id": "sugar:candy_pickaxe",
+		"count": 1
+	}
+}

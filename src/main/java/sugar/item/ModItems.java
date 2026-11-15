@@ -33,9 +33,6 @@ import net.minecraft.world.item.equipment.ArmorType;
 import sugar.SugarMod;
 
 public class ModItems {
-    public static final Identifier BASE_ENTITY_REACH_ID =
-        SugarMod.id("base_entity_reach");
-
     public static final Item CARAMEL = register(
         ModItemIds.CARAMEL,
         Item::new,
@@ -85,7 +82,7 @@ public class ModItems {
         ModItemIds.JET_BOOTS,
         Item::new,
         new Item.Properties().humanoidArmor(ModMaterials.JET_BOOTS, ArmorType.BOOTS)
-            .durability(ArmorType.HELMET.getDurability(ModMaterials.JET_BOOTS.durability()))
+            .durability(ArmorType.BOOTS.getDurability(ModMaterials.JET_BOOTS.durability()))
     );
 
     public static final Item ENDER_BERRIES = register(
@@ -298,7 +295,7 @@ public class ModItems {
                 ).add(
                     Attributes.ENTITY_INTERACTION_RANGE,
                     new AttributeModifier(
-                        BASE_ENTITY_REACH_ID,
+                        SugarMod.id("base_entity_reach"),
                         1.5,
                         AttributeModifier.Operation.ADD_VALUE
                     ),
@@ -385,6 +382,62 @@ public class ModItems {
                 .saturationModifier(1.5f)
                 .build()
         )
+    );
+
+    public static final Item GUMMY_BOOTS = register(
+        ModItemIds.GUMMY_BOOTS,
+        Item::new,
+        new Item.Properties().humanoidArmor(ModMaterials.GUMMY, ArmorType.BOOTS).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.ARMOR,
+                    new AttributeModifier(
+                        Identifier.withDefaultNamespace("armor.boots"),
+                        1,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.FEET
+                ).add(
+                    Attributes.FALL_DAMAGE_MULTIPLIER,
+                    new AttributeModifier(
+                        Identifier.withDefaultNamespace("armor.boots"),
+                        -0.95,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.FEET
+                ).build()
+        ).durability(ArmorType.BOOTS.getDurability(ModMaterials.GUMMY.durability()))
+    );
+
+    public static final Item GUMMY_CHESTPLATE = register(
+        ModItemIds.GUMMY_CHESTPLATE,
+        Item::new,
+        new Item.Properties().humanoidArmor(ModMaterials.GUMMY, ArmorType.CHESTPLATE).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.ARMOR,
+                    new AttributeModifier(
+                        Identifier.withDefaultNamespace("armor.chestplate"),
+                        4,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.CHEST
+                ).add(
+                    Attributes.KNOCKBACK_RESISTANCE,
+                    new AttributeModifier(
+                        Identifier.withDefaultNamespace("armor.chestplate"),
+                        0.8,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.CHEST
+                ).build()
+        ).durability(ArmorType.CHESTPLATE.getDurability(ModMaterials.GUMMY.durability()))
+    );
+    
+    public static final Item CANDY_PICKAXE = register(
+        ModItemIds.CANDY_PICKAXE,
+        Item::new,
+        new Item.Properties().pickaxe(ModMaterials.CANDY_TOOL, 1, -2.8f)
     );
 
 	public static Item register(

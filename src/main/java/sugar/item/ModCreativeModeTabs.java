@@ -60,6 +60,9 @@ public class ModCreativeModeTabs {
 
             output.accept(ModItems.WOW_BOW);
             output.accept(ModItems.JET_BOOTS);
+            output.accept(ModItems.CANDY_PICKAXE);
+            output.accept(ModItems.GUMMY_CHESTPLATE);
+            output.accept(ModItems.GUMMY_BOOTS);
             output.accept(ModItems.PENTUSK);
             output.accept(ModItems.FLAGLESS);
             output.accept(ModItems.JUST_NIL);

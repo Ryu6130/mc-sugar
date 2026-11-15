@@ -89,5 +89,25 @@ public final class FirstPersonAnimationRegistry {
                 return false;
             }
         );
+        FirstPersonAnimationRegistry.register(
+            ModItems.CANDY_CANE,
+            (poseStack, arm, state, tickDelta, attack) -> {
+                float progress = Mth.clamp(attack, 0.0F, 1.0F);
+                float eased = Mth.sin(Mth.PI / 4 + progress * Mth.PI * 1.25);
+                
+                if (progress > 0.0F) {
+                    poseStack.translate(0.2, -0.2, -0.1 + eased * -0.5);
+                    
+                    poseStack.rotateDegrees(Axis.ZP, -90);
+                    poseStack.rotateDegrees(Axis.YP, 10);
+                    Quaternionf rotation = new Quaternionf()
+                        .rotationAxis(-Mth.PI / 2 * Mth.clamp(eased, 0.5f, 1.0f), 1, 0, 0);
+                    poseStack.rotateAround(rotation, 0.0F, -0.1F, 0.0F);
+
+                    return true;
+                }
+                return false;
+            }
+        );
     }
 }

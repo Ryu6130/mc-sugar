@@ -32,10 +32,14 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.CANDY);
             output.accept(ModItems.GELATIN);
             output.accept(ModItems.GUMMY);
+
             output.accept(ModItems.MOLASSES_BOTTLE);
             output.accept(ModItems.RUM_BOTTLE);
             output.accept(ModItems.NECTAR_BOTTLE);
+
             output.accept(ModItems.SUGAR_WAXED_PEMMICAN);
+            output.accept(ModItems.ALLIGANT_JAW);
+            output.accept(ModItems.MAGICAL_JAW);
             
             output.accept(ModItems.VOID);
             output.accept(ModItems.HERMIT_DRAGON_SCALE);
@@ -60,6 +64,7 @@ public class ModCreativeModeTabs {
 
             output.accept(ModItems.WOW_BOW);
             output.accept(ModItems.JET_BOOTS);
+            output.accept(ModItems.CANDY_CANE);
             output.accept(ModItems.CANDY_PICKAXE);
             output.accept(ModItems.GUMMY_CHESTPLATE);
             output.accept(ModItems.GUMMY_BOOTS);

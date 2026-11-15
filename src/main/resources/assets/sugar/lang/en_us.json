@@ -54,5 +54,10 @@
   "item.sugar.gummy": "Gummy",
   "item.sugar.gummy_boots": "Gummy Boots",
   "item.sugar.gummy_chestplate": "Gummy Chestplate",
-  "item.sugar.candy_pickaxe": "Candy Pickaxe"
+  "item.sugar.candy_pickaxe": "Candy Pickaxe",
+  "item.sugar.candy_cane": "Candy Cane",
+  "entity.sugar.alligant": "Alligant",
+  "entity.sugar.alligant_nest": "Alligant Nest",
+  "item.sugar.alligant_jaw": "Alligant Jaw",
+  "item.sugar.magical_jaw": "Magical Jaw"
 }

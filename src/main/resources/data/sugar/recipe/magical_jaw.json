@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"J J",
+		" J "
+	],
+	"key": {
+		"J": "sugar:alligant_jaw"
+	},
+	"result": {
+		"id": "sugar:magical_jaw",
+		"count": 1
+	}
+}

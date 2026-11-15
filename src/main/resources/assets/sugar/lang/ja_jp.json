@@ -54,5 +54,10 @@
   "item.sugar.gummy": "グミ",
   "item.sugar.gummy_boots": "グミのブーツ",
   "item.sugar.gummy_chestplate": "グミのチェストプレート",
-  "item.sugar.candy_pickaxe": "キャンディピッケル"
+  "item.sugar.candy_pickaxe": "キャンディピッケル",
+  "item.sugar.candy_cane": "キャンディケーン",
+  "entity.sugar.alligant": "アリガント",
+  "entity.sugar.alligant_nest": "アリガントの巣",
+  "item.sugar.alligant_jaw": "アリガントの顎",
+  "item.sugar.magical_jaw": "マジカルジャウ"
 }

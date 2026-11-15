@@ -18,6 +18,8 @@ public class ModEntityModelLayers {
 	public static final ModelLayerLocation CANDIED = createMain("candied");
 	public static final ModelLayerLocation BLACK_HOLE = createMain("black_hole");
 	public static final ModelLayerLocation WIND_ATTACK = createMain("wind_attack");
+	public static final ModelLayerLocation ALLIGANT = createMain("alligant");
+	public static final ModelLayerLocation ALLIGANT_NEST = createMain("alligant_nest");
 
 	private static ModelLayerLocation createMain(String name) {
 		return new ModelLayerLocation(SugarMod.id(name), "main");
@@ -42,5 +44,9 @@ public class ModEntityModelLayers {
 			BlackHoleModel::createBodyLayer);
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.WIND_ATTACK,
 			WindAttackModel::createBodyLayer);
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ALLIGANT,
+			AlligantModel::createBodyLayer);
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ALLIGANT_NEST,
+			AlligantNestModel::createBodyLayer);
 	}
 }

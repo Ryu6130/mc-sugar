@@ -296,7 +296,7 @@ public class ModItems {
                     Attributes.ENTITY_INTERACTION_RANGE,
                     new AttributeModifier(
                         SugarMod.id("base_entity_reach"),
-                        1.5,
+                        2,
                         AttributeModifier.Operation.ADD_VALUE
                     ),
                     EquipmentSlotGroup.MAINHAND
@@ -438,6 +438,70 @@ public class ModItems {
         ModItemIds.CANDY_PICKAXE,
         Item::new,
         new Item.Properties().pickaxe(ModMaterials.CANDY_TOOL, 1, -2.8f)
+    );
+
+    public static final Item CANDY_CANE = register(
+        ModItemIds.CANDY_CANE,
+        Item::new,
+        new Item.Properties().durability(234).enchantable(14).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.ATTACK_DAMAGE,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_DAMAGE_ID,
+                        6,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ATTACK_SPEED,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_SPEED_ID,
+                        -2.0,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ENTITY_INTERACTION_RANGE,
+                    new AttributeModifier(
+                        SugarMod.id("base_entity_reach"),
+                        0.5,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).build()
+        ).component(DataComponents.WEAPON, new Weapon(1)).repairable(CANDY)
+    );
+    
+    public static final Item ALLIGANT_JAW = register(
+        ModItemIds.ALLIGANT_JAW,
+        Item::new,
+        new Item.Properties()
+    );
+    
+    public static final Item MAGICAL_JAW = register(
+        ModItemIds.MAGICAL_JAW,
+        Item::new,
+        new Item.Properties().stacksTo(1).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.BLOCK_INTERACTION_RANGE,
+                    new AttributeModifier(
+                        SugarMod.id("base_block_reach"),
+                        3,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.HAND
+                ).add(
+                    Attributes.ENTITY_INTERACTION_RANGE,
+                    new AttributeModifier(
+                        SugarMod.id("base_entity_reach"),
+                        1,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.HAND
+                ).build()
+        )
     );
 
 	public static Item register(

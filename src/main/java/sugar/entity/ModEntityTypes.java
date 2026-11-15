@@ -86,6 +86,20 @@ public class ModEntityTypes {
 		EntityType.Builder.<WindAttack>of(WindAttack::new, MobCategory.MISC)
 			.sized(1F, 0.125F)
 	);
+	
+	public static final EntityType<Alligant> ALLIGANT = register(
+		ModEntityTypeIds.ALLIGANT,
+		EntityType.Builder.<Alligant>of(Alligant::new, MobCategory.MONSTER)
+			.sized(1.25F, 0.75F),
+		Alligant.createAttributes()
+	);
+	
+	public static final EntityType<AlligantNest> ALLIGANT_NEST = register(
+		ModEntityTypeIds.ALLIGANT_NEST,
+		EntityType.Builder.<AlligantNest>of(AlligantNest::new, MobCategory.MONSTER)
+			.sized(0.6F, 0.125F),
+		AlligantNest.createAttributes()
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

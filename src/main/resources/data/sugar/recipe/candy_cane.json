@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"CCC",
+		"C C",
+		"  C"
+	],
+	"key": {
+		"C": "sugar:candy"
+	},
+	"result": {
+		"id": "sugar:candy_cane",
+		"count": 1
+	}
+}

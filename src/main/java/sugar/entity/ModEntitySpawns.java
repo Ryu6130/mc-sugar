@@ -79,5 +79,24 @@ public class ModEntitySpawns {
             1,
             4
         );
+        SpawnPlacements.register(
+            ModEntityTypes.ALLIGANT_NEST,
+            SpawnPlacementTypes.ON_GROUND,
+            Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+            AlligantNest::checkSpawnRules
+        );
+        BiomeModifications.addSpawn(
+            BiomeSelectors.includeByKey(
+                Biomes.PLAINS,
+                Biomes.BIRCH_FOREST,
+                Biomes.FOREST,
+                ModBiomeIds.SUGAR_FOREST
+            ),
+            MobCategory.MONSTER,
+            ModEntityTypes.ALLIGANT_NEST,
+            8,
+            1,
+            1
+        );
     }
 }

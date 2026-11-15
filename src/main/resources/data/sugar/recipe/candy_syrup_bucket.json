@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:water_bucket",
+		"minecraft:sugar",
+		"minecraft:sugar",
+		"minecraft:bucket",
+		"minecraft:sugar"
+	],
+	"result": {
+		"id": "sugar:candy_syrup_bucket",
+		"count": 1
+	}
+}

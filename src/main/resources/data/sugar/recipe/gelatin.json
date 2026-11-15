@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"#sugar:collagen_sources",
+		"#sugar:collagen_sources",
+		"#sugar:collagen_sources",
+		"#sugar:collagen_sources",
+		"minecraft:water_bucket"
+	],
+	"result": {
+		"id": "sugar:gelatin",
+		"count": 2
+	}
+}

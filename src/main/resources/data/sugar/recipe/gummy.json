@@ -1,0 +1,12 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		"sugar:gelatin",
+		"sugar:gelatin",
+		"sugar:candy_syrup_bucket"
+	],
+	"result": {
+		"id": "sugar:gummy",
+		"count": 1
+	}
+}

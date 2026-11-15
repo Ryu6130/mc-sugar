@@ -46,5 +46,10 @@
   "item.sugar.just_nil": "ジャスト・ニル",
   "item.sugar.even_lightoo": "イーブン・ライトゥ",
   "entity.sugar.black_hole": "ブラックホール",
-  "item.sugar.sword_of_the_sage_realm": "仙界の剣"
+  "item.sugar.sword_of_the_sage_realm": "仙界の剣",
+  "entity.sugar.wind_attack": "風",
+  "item.sugar.candy_syrup_bucket": "水あめ入りのバケツ",
+  "item.sugar.candy": "飴玉",
+  "item.sugar.gelatin": "ゼラチン",
+  "item.sugar.gummy": "グミ"
 }

@@ -34,8 +34,6 @@ import sugar.item.ModItems;
 public class PentuskEntity extends AbstractArrow {
     private static final EntityDataAccessor<Byte> ID_LOYALTY;
     private static final EntityDataAccessor<Boolean> ID_FOIL;
-    private static final float WATER_INERTIA = 0.99F;
-    private static final boolean DEFAULT_DEALT_DAMAGE = false;
     private boolean dealtDamage = false;
     public int clientSideReturnTridentTickCount;
 
@@ -141,9 +139,11 @@ public class PentuskEntity extends AbstractArrow {
         if (var7 instanceof ServerLevel serverLevel) {
             dmg = EnchantmentHelper.modifyDamage(serverLevel, this.getWeaponItem(), entity, damageSource, dmg);
         }
-
+        
         this.dealtDamage = true;
-        boolean wasHurt = entity.hurtOrSimulate(damageSource, dmg);
+        boolean wasHurt = entity.level() instanceof ServerLevel serverLevel ?
+            entity.hurtServer(serverLevel, damageSource, dmg) :
+            entity.hurtClient(damageSource);
         if (wasHurt) {
             Level var8 = this.level();
             if (var8 instanceof ServerLevel) {

@@ -46,5 +46,10 @@
   "item.sugar.just_nil": "Just Nil",
   "item.sugar.even_lightoo": "Even-Lightoo",
   "entity.sugar.black_hole": "Black Hole",
-  "item.sugar.sword_of_the_sage_realm": "Sword of the Sage Realm"
+  "item.sugar.sword_of_the_sage_realm": "Sword of the Sage Realm",
+  "entity.sugar.wind_attack": "Wind",
+  "item.sugar.candy_syrup_bucket": "Candy Syrup Bucket",
+  "item.sugar.candy": "Candy",
+  "item.sugar.gelatin": "Gelatin",
+  "item.sugar.gummy": "Gummy"
 }

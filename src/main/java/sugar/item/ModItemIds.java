@@ -34,6 +34,10 @@ public class ModItemIds {
 	public static final ResourceKey<Item> JUST_NIL = create("just_nil");
 	public static final ResourceKey<Item> EVEN_LIGHTOO = create("even_lightoo");
 	public static final ResourceKey<Item> SWORD_OF_THE_SAGE_REALM = create("sword_of_the_sage_realm");
+	public static final ResourceKey<Item> CANDY_SYRUP_BUCKET = create("candy_syrup_bucket");
+	public static final ResourceKey<Item> CANDY = create("candy");
+	public static final ResourceKey<Item> GELATIN = create("gelatin");
+	public static final ResourceKey<Item> GUMMY = create("gummy");
 
 	public static ResourceKey<Item> create(String name) {
 		return ResourceKey.create(Registries.ITEM, SugarMod.id(name));

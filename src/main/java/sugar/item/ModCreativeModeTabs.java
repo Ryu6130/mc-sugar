@@ -28,6 +28,10 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.CARAMEL);
             output.accept(ModItems.KONPEITO);
             output.accept(ModBlocks.KONPEITO_BLOCK);
+            output.accept(ModItems.CANDY_SYRUP_BUCKET);
+            output.accept(ModItems.CANDY);
+            output.accept(ModItems.GELATIN);
+            output.accept(ModItems.GUMMY);
             output.accept(ModItems.MOLASSES_BOTTLE);
             output.accept(ModItems.RUM_BOTTLE);
             output.accept(ModItems.NECTAR_BOTTLE);

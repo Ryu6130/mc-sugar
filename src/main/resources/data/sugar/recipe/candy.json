@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "sugar:candy_syrup_bucket",
+  "result": {
+    "id": "sugar:candy",
+		"count": 2
+  },
+  "experience": 0.7,
+  "cookingtime": 160
+}

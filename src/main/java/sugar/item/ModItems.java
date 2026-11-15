@@ -339,6 +339,54 @@ public class ModItems {
         .component(DataComponents.TOOL, ModTools.SWORD)
     );
 
+    public static final Item CANDY_SYRUP_BUCKET = register(
+        ModItemIds.CANDY_SYRUP_BUCKET,
+        Item::new,
+        new Item.Properties().stacksTo(1).food(
+            new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationModifier(1.5f)
+                .alwaysEdible()
+                .build(),
+            Consumables.defaultDrink()
+                .onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                        new MobEffectInstance(MobEffects.SLOWNESS, 100, 1), 1)
+                ).onConsume(
+                    new ApplyStatusEffectsConsumeEffect(
+                        new MobEffectInstance(MobEffects.SLOW_FALLING, 100, 0), 1)
+                ).build()
+        ).usingConvertsTo(Items.BUCKET).craftRemainder(Items.BUCKET)
+    );
+
+    public static final Item CANDY = register(
+        ModItemIds.CANDY,
+        Item::new,
+        new Item.Properties().food(
+            new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationModifier(1.2f)
+                .build()
+        )
+    );
+
+    public static final Item GELATIN = register(
+        ModItemIds.GELATIN,
+        Item::new,
+        new Item.Properties()
+    );
+
+    public static final Item GUMMY = register(
+        ModItemIds.GUMMY,
+        Item::new,
+        new Item.Properties().food(
+            new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationModifier(1.5f)
+                .build()
+        )
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

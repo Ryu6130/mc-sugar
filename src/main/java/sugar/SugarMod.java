@@ -2,6 +2,7 @@ package sugar;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.resources.Identifier;
+import sugar.ability.ModAbility;
 import sugar.block.ModBlocks;
 import sugar.blockentity.ModBlockEntityTypes;
 import sugar.effect.ModEffects;
@@ -32,6 +33,7 @@ public class SugarMod implements ModInitializer {
         ModEffects.initialize();
         ModPotions.initialize();
         ModWorldgen.initialize();
+        ModAbility.initialize();
     }
 
 	public static Identifier id(String path) {

@@ -15,6 +15,7 @@ public class ModEntityTypeIds {
 	public static ResourceKey<EntityType<?>> SWEEPER = create("sweeper");
 	public static ResourceKey<EntityType<?>> CANDIED = create("candied");
 	public static ResourceKey<EntityType<?>> BLACK_HOLE = create("black_hole");
+	public static ResourceKey<EntityType<?>> WIND_ATTACK = create("wind_attack");
 
 	private static ResourceKey<EntityType<?>> create(String name) {
 		return ResourceKey.create(Registries.ENTITY_TYPE, SugarMod.id(name));

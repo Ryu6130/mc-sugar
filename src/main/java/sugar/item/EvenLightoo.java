@@ -40,8 +40,6 @@ public class EvenLightoo extends Item {
             projectile.setPos(
                 player.getEyePosition().add(player.getViewVector(1.0F).scale(0.5))
             );
-            projectile.setXRot(player.getXRot());
-            projectile.setYRot(player.getYRot());
             projectile.setDeltaMovement(player.getViewVector(1.0F).scale(pow));
             serverlevel.addFreshEntity(projectile);
             itemStack.hurtAndBreak(1, player, player.getUsedItemHand());

@@ -1,4 +1,4 @@
-package sugar.item;
+package sugar.ability;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +13,7 @@ import net.minecraft.network.protocol.game.ClientboundSetEntityMotionPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.phys.Vec3;
+import sugar.item.ModItems;
 
 public class JetManager {
     private static final Map<UUID, Boolean> JET_MAP = new HashMap<>();

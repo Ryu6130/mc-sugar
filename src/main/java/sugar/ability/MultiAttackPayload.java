@@ -1,4 +1,4 @@
-package sugar.item;
+package sugar.ability;
 
 import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.network.codec.StreamCodec;

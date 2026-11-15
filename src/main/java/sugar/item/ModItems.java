@@ -1,10 +1,16 @@
 package sugar.item;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
 
+import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -22,9 +28,14 @@ import net.minecraft.world.item.component.Weapon;
 import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 import net.minecraft.world.item.consume_effects.RemoveStatusEffectsConsumeEffect;
 import net.minecraft.world.item.consume_effects.TeleportRandomlyConsumeEffect;
+import net.minecraft.world.item.enchantment.Repairable;
 import net.minecraft.world.item.equipment.ArmorType;
+import sugar.SugarMod;
 
 public class ModItems {
+    public static final Identifier BASE_ENTITY_REACH_ID =
+        SugarMod.id("base_entity_reach");
+
     public static final Item CARAMEL = register(
         ModItemIds.CARAMEL,
         Item::new,
@@ -251,7 +262,7 @@ public class ModItems {
                     ),
                     EquipmentSlotGroup.MAINHAND
                 ).build()
-        )
+        ).repairable(VOID)
     );
 
     public static final Item SUGAR_WAXED_PEMMICAN = register(
@@ -284,14 +295,48 @@ public class ModItems {
                         AttributeModifier.Operation.ADD_VALUE
                     ),
                     EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ENTITY_INTERACTION_RANGE,
+                    new AttributeModifier(
+                        BASE_ENTITY_REACH_ID,
+                        1.5,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
                 ).build()
-        ).component(DataComponents.WEAPON, new Weapon(1))
+        ).component(DataComponents.WEAPON, new Weapon(1)).repairable(VOID)
     );
 
     public static final Item EVEN_LIGHTOO = register(
         ModItemIds.EVEN_LIGHTOO,
         EvenLightoo::new,
-        new Item.Properties().durability(333).enchantable(17)
+        new Item.Properties().durability(245).enchantable(17).repairable(VOID)
+    );
+
+    public static final Item SWORD_OF_THE_SAGE_REALM = register(
+        ModItemIds.SWORD_OF_THE_SAGE_REALM,
+        Item::new,
+        new Item.Properties().durability(456).enchantable(16).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.ATTACK_DAMAGE,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_DAMAGE_ID,
+                        5.5,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ATTACK_SPEED,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_SPEED_ID,
+                        -0.7,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).build()
+        ).component(DataComponents.WEAPON, new Weapon(1)).repairable(HERMIT_DRAGON_SCALE)
+        .component(DataComponents.TOOL, ModTools.SWORD)
     );
 
 	public static Item register(
@@ -307,7 +352,19 @@ public class ModItems {
 	}
 
     public static void initialize() {
-        JetManager.initialize();
-        MultiAttackManager.initialize();
+        DefaultItemComponentEvents.MODIFY.register(context -> {
+            List<Holder<Item>> items = new ArrayList<>(
+                Items.ELYTRA.components().get(DataComponents.REPAIRABLE)
+                    .items().stream().toList()
+            );
+            items.add(BuiltInRegistries.ITEM.wrapAsHolder(HERMIT_DRAGON_SCALE));
+
+            context.modify(Items.ELYTRA, builder -> {
+                builder.set(
+                    DataComponents.REPAIRABLE,
+                    new Repairable(HolderSet.direct(items))
+                );
+            });
+        });
     }
 }

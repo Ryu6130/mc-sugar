@@ -17,6 +17,7 @@ public class ModEntityModelLayers {
 	public static final ModelLayerLocation SWEEPER = createMain("sweeper");
 	public static final ModelLayerLocation CANDIED = createMain("candied");
 	public static final ModelLayerLocation BLACK_HOLE = createMain("black_hole");
+	public static final ModelLayerLocation WIND_ATTACK = createMain("wind_attack");
 
 	private static ModelLayerLocation createMain(String name) {
 		return new ModelLayerLocation(SugarMod.id(name), "main");
@@ -39,5 +40,7 @@ public class ModEntityModelLayers {
 			() -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0), 64, 64));
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.BLACK_HOLE,
 			BlackHoleModel::createBodyLayer);
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.WIND_ATTACK,
+			WindAttackModel::createBodyLayer);
 	}
 }

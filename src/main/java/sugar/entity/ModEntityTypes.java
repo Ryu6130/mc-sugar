@@ -80,6 +80,12 @@ public class ModEntityTypes {
 		EntityType.Builder.<BlackHole>of(BlackHole::new, MobCategory.MISC)
 			.sized(0.5F, 0.5F)
 	);
+	
+	public static final EntityType<WindAttack> WIND_ATTACK = register(
+		ModEntityTypeIds.WIND_ATTACK,
+		EntityType.Builder.<WindAttack>of(WindAttack::new, MobCategory.MISC)
+			.sized(1F, 0.125F)
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

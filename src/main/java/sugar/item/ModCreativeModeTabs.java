@@ -34,10 +34,6 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.SUGAR_WAXED_PEMMICAN);
             
             output.accept(ModItems.VOID);
-            output.accept(ModItems.FLAGLESS);
-            output.accept(ModItems.JUST_NIL);
-            output.accept(ModItems.EVEN_LIGHTOO);
-
             output.accept(ModItems.HERMIT_DRAGON_SCALE);
 
             output.accept(ModItems.SAND_BERRY);
@@ -61,6 +57,10 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.WOW_BOW);
             output.accept(ModItems.JET_BOOTS);
             output.accept(ModItems.PENTUSK);
+            output.accept(ModItems.FLAGLESS);
+            output.accept(ModItems.JUST_NIL);
+            output.accept(ModItems.EVEN_LIGHTOO);
+            output.accept(ModItems.SWORD_OF_THE_SAGE_REALM);
 
             output.accept(ModBlocks.CANE_LOG);
             output.accept(ModBlocks.CANE_LEAVES);

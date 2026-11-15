@@ -1,4 +1,4 @@
-package sugar.item;
+package sugar.ability;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -18,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
+import sugar.item.ModItems;
 
 public class MultiAttackManager {
     public static void clientInitialize() {
@@ -43,7 +44,10 @@ public class MultiAttackManager {
                 ServerPlayer player = context.player();
                 ItemStack item = player.getMainHandItem();
 
-                if (!item.is(ModItems.FLAGLESS)) {
+                if (
+                    !item.is(ModItems.FLAGLESS) ||
+                    player.getAttackStrengthScale(0) < 1
+                ) {
                     return;
                 }
 

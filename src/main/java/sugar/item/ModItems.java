@@ -10,6 +10,7 @@ import net.minecraft.core.HolderSet;
 import net.minecraft.core.Registry;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
@@ -31,6 +32,9 @@ import net.minecraft.world.item.consume_effects.TeleportRandomlyConsumeEffect;
 import net.minecraft.world.item.enchantment.Repairable;
 import net.minecraft.world.item.equipment.ArmorType;
 import sugar.SugarMod;
+import sugar.component.InventoryAttributesComponent;
+import sugar.component.ModDataComponents;
+import sugar.component.SimpleTooltipComponent;
 
 public class ModItems {
     public static final Item CARAMEL = register(
@@ -487,7 +491,7 @@ public class ModItems {
                 .add(
                     Attributes.BLOCK_INTERACTION_RANGE,
                     new AttributeModifier(
-                        SugarMod.id("base_block_reach"),
+                        ModItemIds.MAGICAL_JAW.identifier(),
                         3,
                         AttributeModifier.Operation.ADD_VALUE
                     ),
@@ -495,12 +499,81 @@ public class ModItems {
                 ).add(
                     Attributes.ENTITY_INTERACTION_RANGE,
                     new AttributeModifier(
-                        SugarMod.id("base_entity_reach"),
+                        ModItemIds.MAGICAL_JAW.identifier(),
                         1,
                         AttributeModifier.Operation.ADD_VALUE
                     ),
                     EquipmentSlotGroup.HAND
                 ).build()
+        )
+    );
+    
+    public static final Item SELFISH_LORE = register(
+        ModItemIds.SELFISH_LORE,
+        Item::new,
+        new Item.Properties().stacksTo(1).component(
+            ModDataComponents.INVENTORY_ATTRIBUTES,
+            InventoryAttributesComponent.builder()
+                .add(
+                    Attributes.MOVEMENT_SPEED,
+                    new AttributeModifier(
+                        ModItemIds.SELFISH_LORE.identifier(),
+                        0.01,
+                        AttributeModifier.Operation.ADD_VALUE
+                    )
+                ).add(
+                    Attributes.SNEAKING_SPEED,
+                    new AttributeModifier(
+                        ModItemIds.SELFISH_LORE.identifier(),
+                        0.005,
+                        AttributeModifier.Operation.ADD_VALUE
+                    )
+                ).build()
+        ).component(
+            ModDataComponents.SIMPLE_TOOLTIP,
+            new SimpleTooltipComponent(List.of(
+                Component.translatable("itemTooltip.sugar.selfish_lore.line1"),
+                Component.translatable("itemTooltip.sugar.selfish_lore.line2"),
+                Component.translatable("itemTooltip.sugar.selfish_lore.line3"),
+                Component.translatable("itemTooltip.sugar.selfish_lore.line4"),
+                Component.translatable("itemTooltip.sugar.selfish_lore.line5"),
+                Component.translatable("itemTooltip.sugar.selfish_lore.line6"),
+                Component.translatable("itemTooltip.sugar.selfish_lore.line7"),
+                Component.translatable("itemTooltip.sugar.selfish_lore.line8"),
+                Component.translatable("itemTooltip.sugar.selfish_lore.line9")
+            ))
+        )
+    );
+    
+    public static final Item DRAGON_LORE = register(
+        ModItemIds.DRAGON_LORE,
+        Item::new,
+        new Item.Properties().stacksTo(1).component(
+            ModDataComponents.INVENTORY_ATTRIBUTES,
+            InventoryAttributesComponent.builder()
+                .add(
+                    Attributes.ATTACK_DAMAGE,
+                    new AttributeModifier(
+                        SugarMod.id("base_attack_damage"),
+                        0.5,
+                        AttributeModifier.Operation.ADD_VALUE
+                    )
+                ).add(
+                    Attributes.ATTACK_SPEED,
+                    new AttributeModifier(
+                        SugarMod.id("base_attack_speed"),
+                        -0.2,
+                        AttributeModifier.Operation.ADD_VALUE
+                    )
+                ).build()
+        ).component(
+            ModDataComponents.SIMPLE_TOOLTIP,
+            new SimpleTooltipComponent(List.of(
+                Component.translatable("itemTooltip.sugar.dragon_lore.line1"),
+                Component.translatable("itemTooltip.sugar.dragon_lore.line2"),
+                Component.translatable("itemTooltip.sugar.dragon_lore.line3"),
+                Component.translatable("itemTooltip.sugar.dragon_lore.line4")
+            ))
         )
     );
 

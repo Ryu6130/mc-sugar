@@ -59,5 +59,34 @@
   "entity.sugar.alligant": "アリガント",
   "entity.sugar.alligant_nest": "アリガントの巣",
   "item.sugar.alligant_jaw": "アリガントの顎",
-  "item.sugar.magical_jaw": "マジカルジャウ"
+  "item.sugar.magical_jaw": "マジカルジャウ",
+  "item.sugar.selfish_lore": "利己的な伝承",
+  "itemTooltip.sugar.selfish_lore.line1":
+    "その昔、ベリーの神様\"ベリーゴッド\"は村人たちへ言った。",
+  "itemTooltip.sugar.selfish_lore.line2":
+    "「狡猾で貪欲な遊び人\"プレイヤー\"がこの世界へやってくる。彼らは君たちに悪さをするだろう」",
+  "itemTooltip.sugar.selfish_lore.line3":
+    "その言葉に村人は驚きひれ伏す。あるものはベリーを崇拝し、あるものはバイオ科学の発展を遂げた。",
+  "itemTooltip.sugar.selfish_lore.line4":
+    "バイオ科学に恐れをなした神様はすぐに科学者たちを追放した。",
+  "itemTooltip.sugar.selfish_lore.line5":
+    "その後、科学者は野宿や研究を繰り返し、\"シュガーディアン\"という対プレイヤー兵器を作った。",
+  "itemTooltip.sugar.selfish_lore.line6":
+    "だが生存能力の弱い科学者だけでは生きていけず、その血は途絶えた。",
+  "itemTooltip.sugar.selfish_lore.line7":
+    "未だに神様への信仰力は不足していたが、恐怖支配は行わなかった。",
+  "itemTooltip.sugar.selfish_lore.line8":
+    "せめてもの優しさか、はたまた気まぐれか。それは神にしか知りえない。",
+  "itemTooltip.sugar.selfish_lore.line9":
+    "いくつもの時が過ぎ、いまやベリーの力は弱まり、村人はプレイヤーの存在を忘れてしまった。",
+  "item.sugar.dragon_lore": "ドラゴンの伝承",
+  "itemTooltip.sugar.dragon_lore.line1":
+    "オーバーワールドに一匹のドラゴンとそれを囲む竜人族がいた。",
+  "itemTooltip.sugar.dragon_lore.line2":
+    "ドラゴンはプレイヤーの存在を予言し、民と共に\"ジ・エンド\"へと逃げ込む。",
+  "itemTooltip.sugar.dragon_lore.line3":
+    "ジ・エンドの影響を受け、彼らはエンダードラゴンやエンダーマンへと姿を変えた。",
+  "itemTooltip.sugar.dragon_lore.line4":
+    "オーバーワールドに残った一部の竜人はやがて仙竜へと姿を変えたのだった。",
+  "item.modifiers.inventory": "所持しているとき:"
 }

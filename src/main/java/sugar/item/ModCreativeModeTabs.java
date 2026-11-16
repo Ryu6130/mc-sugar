@@ -76,6 +76,9 @@ public class ModCreativeModeTabs {
 
             output.accept(ModBlocks.CANE_LOG);
             output.accept(ModBlocks.CANE_LEAVES);
+            
+            output.accept(ModItems.SELFISH_LORE);
+            output.accept(ModItems.DRAGON_LORE);
         })
         .build();
 

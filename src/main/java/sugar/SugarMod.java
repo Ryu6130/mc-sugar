@@ -5,6 +5,7 @@ import net.minecraft.resources.Identifier;
 import sugar.ability.ModAbility;
 import sugar.block.ModBlocks;
 import sugar.blockentity.ModBlockEntityTypes;
+import sugar.component.ModDataComponents;
 import sugar.effect.ModEffects;
 import sugar.entity.ModEntitySpawns;
 import sugar.entity.ModEntityTypes;
@@ -34,6 +35,7 @@ public class SugarMod implements ModInitializer {
         ModPotions.initialize();
         ModWorldgen.initialize();
         ModAbility.initialize();
+        ModDataComponents.initialize();
     }
 
 	public static Identifier id(String path) {

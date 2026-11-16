@@ -59,5 +59,34 @@
   "entity.sugar.alligant": "Alligant",
   "entity.sugar.alligant_nest": "Alligant Nest",
   "item.sugar.alligant_jaw": "Alligant Jaw",
-  "item.sugar.magical_jaw": "Magical Jaw"
+  "item.sugar.magical_jaw": "Magical Jaw",
+  "item.sugar.selfish_lore": "Selfish Lore",
+  "itemTooltip.sugar.selfish_lore.line1":
+  "Long ago, the Berry God said to the villagers:",
+  "itemTooltip.sugar.selfish_lore.line2":
+  "'A cunning and greedy player will come to this world. They will do evil to you.'",
+  "itemTooltip.sugar.selfish_lore.line3":
+  "The villagers were astonished and bowed down at his words. Some worshipped berries, while others advanced bioscience.",
+  "itemTooltip.sugar.selfish_lore.line4":
+  "Fearing bioscience, the god quickly banished the scientists.",
+  "itemTooltip.sugar.selfish_lore.line5":
+  "After that, the scientists continued to camp and conduct research, creating a weapon against players called the Sugardian.",
+  "itemTooltip.sugar.selfish_lore.line6":
+  "But scientists with weak survival skills could not survive alone, and their bloodline died out.",
+  "itemTooltip.sugar.selfish_lore.line7":
+  "Although their faith in God was still insufficient, they did not rule by fear.",
+  "itemTooltip.sugar.selfish_lore.line8":
+  "Was it a small act of kindness, or simply a whim? Only God knows.",
+  "itemTooltip.sugar.selfish_lore.line9":
+  "Many years passed, and now Berry's power has weakened, and the villagers have forgotten the player's existence.",
+  "item.sugar.dragon_lore": "Dragon Lore",
+  "itemTooltip.sugar.dragon_lore.line1":
+    "In the Overworld, there was a dragon and a group of dragonkin surrounding it.",
+  "itemTooltip.sugar.dragon_lore.line2":
+    "The dragon foretold the player's presence and fled with its people to the End.",
+  "itemTooltip.sugar.dragon_lore.line3":
+    "Influenced by the End, they transformed into Ender Dragon and Ender Man.",
+  "itemTooltip.sugar.dragon_lore.line4":
+    "Some of the dragonkin who remained in the Overworld eventually transformed into Hermit Dragon.",
+  "item.modifiers.inventory": "When in Inventory:"
 }

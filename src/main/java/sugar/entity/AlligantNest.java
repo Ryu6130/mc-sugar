@@ -54,7 +54,19 @@ public class AlligantNest extends Monster {
         BlockPos pos,
         RandomSource random
     ) {
-        return Monster.checkAnyLightMonsterSpawnRules(type, level, spawnReason, pos, random);
+        if (!Monster.checkAnyLightMonsterSpawnRules(type, level, spawnReason, pos, random)) {
+            return false;
+        }
+
+        if (!level.canSeeSky(pos)) {
+            return false;
+        }
+
+        if (level.getRawBrightness(pos, 0) < 10) {
+            return false;
+        }
+
+        return true;
     }
 
     @Override

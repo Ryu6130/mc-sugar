@@ -90,14 +90,16 @@ public class ModEntityTypes {
 	public static final EntityType<Alligant> ALLIGANT = register(
 		ModEntityTypeIds.ALLIGANT,
 		EntityType.Builder.<Alligant>of(Alligant::new, MobCategory.MONSTER)
-			.sized(1.25F, 0.75F),
+			.sized(1.25F, 0.75F)
+			.notInPeaceful(),
 		Alligant.createAttributes()
 	);
 	
 	public static final EntityType<AlligantNest> ALLIGANT_NEST = register(
 		ModEntityTypeIds.ALLIGANT_NEST,
 		EntityType.Builder.<AlligantNest>of(AlligantNest::new, MobCategory.MONSTER)
-			.sized(0.6F, 0.125F),
+			.sized(0.6F, 0.125F)
+			.notInPeaceful(),
 		AlligantNest.createAttributes()
 	);
 

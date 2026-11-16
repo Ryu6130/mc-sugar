@@ -1,0 +1,14 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"S",
+		"S"
+	],
+	"key": {
+		"S": "minecraft:sugar_cane"
+	},
+	"result": {
+		"id": "minecraft:stick",
+		"count": 2
+	}
+}

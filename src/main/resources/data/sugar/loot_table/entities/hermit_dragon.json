@@ -17,6 +17,15 @@
           }
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sugar:dragon_lore"
+        }
+      ]
     }
   ]
 }

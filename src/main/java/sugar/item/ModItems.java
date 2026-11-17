@@ -577,6 +577,14 @@ public class ModItems {
         )
     );
 
+    public static final Item RAINBOW_BOW = register(
+        ModItemIds.RAINBOW_BOW,
+        RainbowBow::new,
+        new Item.Properties()
+            .durability(455)
+            .enchantable(3)
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

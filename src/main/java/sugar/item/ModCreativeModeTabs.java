@@ -63,6 +63,7 @@ public class ModCreativeModeTabs {
             output.accept(ModBlocks.FERMENTATION_TANK);
 
             output.accept(ModItems.WOW_BOW);
+            output.accept(ModItems.RAINBOW_BOW);
             output.accept(ModItems.JET_BOOTS);
             output.accept(ModItems.CANDY_CANE);
             output.accept(ModItems.CANDY_PICKAXE);

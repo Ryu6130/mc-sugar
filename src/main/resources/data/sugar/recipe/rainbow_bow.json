@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" BS",
+		"BRS",
+		" BS"
+	],
+	"key": {
+		"R": "sugar:rainbow_soup",
+		"B": "sugar:sweetest_berries",
+		"S": "minecraft:string"
+	},
+	"result": {
+		"id": "sugar:rainbow_bow",
+		"count": 1
+	}
+}

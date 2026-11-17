@@ -18,6 +18,8 @@ public class ModEntityTypeIds {
 	public static ResourceKey<EntityType<?>> WIND_ATTACK = create("wind_attack");
 	public static ResourceKey<EntityType<?>> ALLIGANT = create("alligant");
 	public static ResourceKey<EntityType<?>> ALLIGANT_NEST = create("alligant_nest");
+	public static ResourceKey<EntityType<?>> RED_AMD = create("red_amd");
+	public static ResourceKey<EntityType<?>> BLUE_AMD = create("blue_amd");
 
 	private static ResourceKey<EntityType<?>> create(String name) {
 		return ResourceKey.create(Registries.ENTITY_TYPE, SugarMod.id(name));

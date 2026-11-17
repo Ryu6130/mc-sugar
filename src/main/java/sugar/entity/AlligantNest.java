@@ -75,9 +75,11 @@ public class AlligantNest extends Monster {
             ticks++ % 200 == 0 &&
             level.getEntitiesOfClass(Alligant.class, getBoundingBox().inflate(32.0)).size() <= 8
         ) {
-            Alligant entity = new Alligant(level);
-            entity.setPos(position());
-            level.addFreshEntity(entity);
+            Alligant entity = ModEntityTypes.ALLIGANT.create(level, EntitySpawnReason.TRIGGERED);
+            if (entity != null) {
+                entity.snapTo(position());
+                level.addFreshEntity(entity);
+            }
         }
     }
 }

@@ -20,6 +20,8 @@ import sugar.entity.ModEntityModelLayers;
 import sugar.entity.ModEntityTypes;
 import sugar.entity.PentuskRenderer;
 import sugar.entity.PentuskSpecialRenderer;
+import sugar.entity.RedAMDRenderer;
+import sugar.entity.BlueAMDRenderer;
 import sugar.entity.SugardianRenderer;
 import sugar.entity.SweeperRenderer;
 import sugar.entity.WindAttackRenderer;
@@ -47,6 +49,8 @@ public class SugarClientMod implements ClientModInitializer {
         EntityRenderers.register(ModEntityTypes.WIND_ATTACK, WindAttackRenderer::new);
         EntityRenderers.register(ModEntityTypes.ALLIGANT, AlligantRenderer::new);
         EntityRenderers.register(ModEntityTypes.ALLIGANT_NEST, AlligantNestRenderer::new);
+        EntityRenderers.register(ModEntityTypes.RED_AMD, RedAMDRenderer::new);
+        EntityRenderers.register(ModEntityTypes.BLUE_AMD, BlueAMDRenderer::new);
         SpecialModelRenderers.ID_MAPPER.put(
             SugarMod.id("pentusk"),
             PentuskSpecialRenderer.Unbaked.MAP_CODEC

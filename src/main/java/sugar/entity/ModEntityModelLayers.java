@@ -20,6 +20,7 @@ public class ModEntityModelLayers {
 	public static final ModelLayerLocation WIND_ATTACK = createMain("wind_attack");
 	public static final ModelLayerLocation ALLIGANT = createMain("alligant");
 	public static final ModelLayerLocation ALLIGANT_NEST = createMain("alligant_nest");
+	public static final ModelLayerLocation AMD = createMain("amd");
 
 	private static ModelLayerLocation createMain(String name) {
 		return new ModelLayerLocation(SugarMod.id(name), "main");
@@ -48,5 +49,7 @@ public class ModEntityModelLayers {
 			AlligantModel::createBodyLayer);
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ALLIGANT_NEST,
 			AlligantNestModel::createBodyLayer);
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.AMD,
+			AMDModel::createBodyLayer);
 	}
 }

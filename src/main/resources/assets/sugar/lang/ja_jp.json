@@ -89,5 +89,7 @@
   "itemTooltip.sugar.dragon_lore.line4":
     "オーバーワールドに残った一部の竜人はやがて仙竜へと姿を変えたのだった。",
   "item.modifiers.inventory": "所持しているとき:",
-  "item.sugar.rainbow_bow": "レインボウ"
+  "item.sugar.rainbow_bow": "レインボウ",
+  "entity.sugar.red_amd": "レッドアムド",
+  "entity.sugar.blue_amd": "ブルーアムド"
 }

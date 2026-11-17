@@ -102,6 +102,22 @@ public class ModEntityTypes {
 			.notInPeaceful(),
 		AlligantNest.createAttributes()
 	);
+	
+	public static final EntityType<RedAMD> RED_AMD = register(
+		ModEntityTypeIds.RED_AMD,
+		EntityType.Builder.<RedAMD>of(RedAMD::new, MobCategory.MONSTER)
+			.sized(3F, 4F)
+			.notInPeaceful(),
+		RedAMD.createAttributes()
+	);
+	
+	public static final EntityType<BlueAMD> BLUE_AMD = register(
+		ModEntityTypeIds.BLUE_AMD,
+		EntityType.Builder.<BlueAMD>of(BlueAMD::new, MobCategory.MONSTER)
+			.sized(3F, 4F)
+			.notInPeaceful(),
+		BlueAMD.createAttributes()
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

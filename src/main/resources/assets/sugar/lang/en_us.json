@@ -89,5 +89,7 @@
   "itemTooltip.sugar.dragon_lore.line4":
     "Some of the dragonkin who remained in the Overworld eventually transformed into Hermit Dragon.",
   "item.modifiers.inventory": "When in Inventory:",
-  "item.sugar.rainbow_bow": "Rainbow Bow"
+  "item.sugar.rainbow_bow": "Rainbow Bow",
+  "entity.sugar.red_amd": "Red AMD",
+  "entity.sugar.blue_amd": "Blue"
 }

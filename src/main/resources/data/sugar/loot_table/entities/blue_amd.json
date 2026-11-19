@@ -9,6 +9,23 @@
           "name": "sugar:blue_lore"
         }
       ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "sugar:exo_armor_scrap",
+          "modifier": {
+            "type": "minecraft:set_count",
+            "count": {
+              "type": "minecraft:uniform",
+              "min": 7,
+              "max": 9
+            }
+          }
+        }
+      ]
     }
   ]
 }

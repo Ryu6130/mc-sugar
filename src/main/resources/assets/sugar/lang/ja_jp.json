@@ -105,10 +105,11 @@
   "itemTooltip.sugar.blue_lore.line1":
     "奴らの兵器\"ツインアムド\"は強力すぎる、きっとアーク族は滅びるだろう。",
   "itemTooltip.sugar.blue_lore.line2":
-    "アーク族の卵をノームに託した、奴らでも探知できないだろう。",
+    "アーク族の卵をノームに託した、奴らでも探知できないはずだ。",
   "itemTooltip.sugar.blue_lore.line3":
     "神よ、どうかあの忌まわしい赤き軍勢をどうか鎮めてくだされ！",
   "entity.sugar.arc": "アーク",
   "block.sugar.twin_amd_alter": "ツインアムドの祭壇",
-  "item.sugar.armored_key": "アーマードキー"
+  "item.sugar.armored_key": "アーマードキー",
+  "item.sugar.exo_armor_scrap": "アーマー外殻"
 }

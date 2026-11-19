@@ -646,6 +646,12 @@ public class ModItems {
         new Item.Properties()
     );
 
+    public static final Item EXO_ARMOR_SCRAP = register(
+        ModItemIds.EXO_ARMOR_SCRAP,
+        Item::new,
+        new Item.Properties()
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

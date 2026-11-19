@@ -80,6 +80,7 @@ public class ModCreativeModeTabs {
             
             output.accept(ModBlocks.TWIN_AMD_ALTER);
             output.accept(ModItems.ARMORED_KEY);
+            output.accept(ModItems.EXO_ARMOR_SCRAP);
             output.accept(ModBlocks.ARC_EGG);
             
             output.accept(ModItems.SELFISH_LORE);

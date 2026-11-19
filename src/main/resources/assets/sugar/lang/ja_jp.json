@@ -91,5 +91,24 @@
   "item.modifiers.inventory": "所持しているとき:",
   "item.sugar.rainbow_bow": "レインボウ",
   "entity.sugar.red_amd": "レッドアムド",
-  "entity.sugar.blue_amd": "ブルーアムド"
+  "entity.sugar.blue_amd": "ブルーアムド",
+  "entity.sugar.gnome": "ノーム",
+  "block.sugar.arc_egg": "アークの卵",
+  "item.sugar.red_lore": "赤き伝承",
+  "itemTooltip.sugar.red_lore.line1":
+    "\"ツインアムド\"が完成したらこの戦争も終わり平和が訪れるだろう。",
+  "itemTooltip.sugar.red_lore.line2":
+    "古臭い魔法なんてくそくらえ、時代は工業化であり共産主義なんだよ！",
+  "itemTooltip.sugar.red_lore.line3":
+    "青き者たちに粛清を！",
+  "item.sugar.blue_lore": "青き伝承",
+  "itemTooltip.sugar.blue_lore.line1":
+    "奴らの兵器\"ツインアムド\"は強力すぎる、きっとアーク族は滅びるだろう。",
+  "itemTooltip.sugar.blue_lore.line2":
+    "アーク族の卵をノームに託した、奴らでも探知できないだろう。",
+  "itemTooltip.sugar.blue_lore.line3":
+    "神よ、どうかあの忌まわしい赤き軍勢をどうか鎮めてくだされ！",
+  "entity.sugar.arc": "アーク",
+  "block.sugar.twin_amd_alter": "ツインアムドの祭壇",
+  "item.sugar.armored_key": "アーマードキー"
 }

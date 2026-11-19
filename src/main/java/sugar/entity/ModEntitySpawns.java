@@ -98,5 +98,23 @@ public class ModEntitySpawns {
             1,
             1
         );
+        SpawnPlacements.register(
+            ModEntityTypes.GNOME,
+            SpawnPlacementTypes.ON_GROUND,
+            Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+            Gnome::checkSpawnRules
+        );
+        BiomeModifications.addSpawn(
+            BiomeSelectors.includeByKey(
+                Biomes.PLAINS,
+                Biomes.BIRCH_FOREST,
+                Biomes.FOREST
+            ),
+            MobCategory.CREATURE,
+            ModEntityTypes.GNOME,
+            7,
+            1,
+            2
+        );
     }
 }

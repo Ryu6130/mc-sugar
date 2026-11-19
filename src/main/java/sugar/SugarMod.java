@@ -7,6 +7,7 @@ import sugar.block.ModBlocks;
 import sugar.blockentity.ModBlockEntityTypes;
 import sugar.component.ModDataComponents;
 import sugar.effect.ModEffects;
+import sugar.entity.GnomeTrades;
 import sugar.entity.ModEntitySpawns;
 import sugar.entity.ModEntityTypes;
 import sugar.item.ModCreativeModeTabs;
@@ -36,6 +37,7 @@ public class SugarMod implements ModInitializer {
         ModWorldgen.initialize();
         ModAbility.initialize();
         ModDataComponents.initialize();
+        GnomeTrades.initialize();
     }
 
 	public static Identifier id(String path) {

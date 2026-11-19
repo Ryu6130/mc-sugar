@@ -118,6 +118,21 @@ public class ModEntityTypes {
 			.notInPeaceful(),
 		BlueAMD.createAttributes()
 	);
+	
+	public static final EntityType<Gnome> GNOME = register(
+		ModEntityTypeIds.GNOME,
+		EntityType.Builder.<Gnome>of(Gnome::new, MobCategory.CREATURE)
+			.sized(0.5F, 1F),
+		Gnome.createAttributes()
+	);
+	
+	public static final EntityType<Arc> ARC = register(
+		ModEntityTypeIds.ARC,
+		EntityType.Builder.<Arc>of(Arc::new, MobCategory.CREATURE)
+			.sized(0.6F, 1.95F)
+			.eyeHeight(1.74F),
+		Arc.createAttributes()
+	);
 
 	private static <T extends Entity> EntityType<T> register(
         ResourceKey<EntityType<?>> key,

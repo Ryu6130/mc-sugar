@@ -11,10 +11,12 @@ import sugar.block.ModBlocks;
 import sugar.client.render.FirstPersonAnimationRegistry;
 import sugar.entity.AlligantNestRenderer;
 import sugar.entity.AlligantRenderer;
+import sugar.entity.ArcRenderer;
 import sugar.entity.BerryGodRenderer;
 import sugar.entity.BlackHoleRenderer;
 import sugar.entity.CandiedRenderer;
 import sugar.entity.DesertDessertRenderer;
+import sugar.entity.GnomeRenderer;
 import sugar.entity.HermitDragonRenderer;
 import sugar.entity.ModEntityModelLayers;
 import sugar.entity.ModEntityTypes;
@@ -51,6 +53,8 @@ public class SugarClientMod implements ClientModInitializer {
         EntityRenderers.register(ModEntityTypes.ALLIGANT_NEST, AlligantNestRenderer::new);
         EntityRenderers.register(ModEntityTypes.RED_AMD, RedAMDRenderer::new);
         EntityRenderers.register(ModEntityTypes.BLUE_AMD, BlueAMDRenderer::new);
+        EntityRenderers.register(ModEntityTypes.GNOME, GnomeRenderer::new);
+        EntityRenderers.register(ModEntityTypes.ARC, ArcRenderer::new);
         SpecialModelRenderers.ID_MAPPER.put(
             SugarMod.id("pentusk"),
             PentuskSpecialRenderer.Unbaked.MAP_CODEC

@@ -91,5 +91,24 @@
   "item.modifiers.inventory": "When in Inventory:",
   "item.sugar.rainbow_bow": "Rainbow Bow",
   "entity.sugar.red_amd": "Red AMD",
-  "entity.sugar.blue_amd": "Blue"
+  "entity.sugar.blue_amd": "Blue AMD",
+  "entity.sugar.gnome": "Gnome",
+  "block.sugar.arc_egg": "Arc Egg",
+  "item.sugar.red_lore": "Red Lore",
+  "itemTooltip.sugar.red_lore.line1":
+    "Once the 'Twin AMD' is completed, this war will end and peace will prevail.",
+  "itemTooltip.sugar.red_lore.line2":
+    "To hell with old-fashioned magic! The age of industrialization and communism is here!",
+  "itemTooltip.sugar.red_lore.line3":
+    "Purge the blue ones!",
+  "item.sugar.blue_lore": "Blue Lore",
+  "itemTooltip.sugar.blue_lore.line1":
+    "Their weapon, the 'Twin AMD', is too powerful; the Arc tribe will surely be annihilated.",
+  "itemTooltip.sugar.blue_lore.line2":
+    "I entrusted the Arc's eggs to the gnomes; even they won't be able to detect them.",
+  "itemTooltip.sugar.blue_lore.line3":
+    "God, please quell that abominable red army!",
+  "entity.sugar.arc": "Arc",
+  "block.sugar.twin_amd_alter": "Twin AMD Alter",
+  "item.sugar.armored_key": "Armored Key"
 }

@@ -554,14 +554,14 @@ public class ModItems {
                 .add(
                     Attributes.ATTACK_DAMAGE,
                     new AttributeModifier(
-                        SugarMod.id("base_attack_damage"),
+                        ModItemIds.DRAGON_LORE.identifier(),
                         0.5,
                         AttributeModifier.Operation.ADD_VALUE
                     )
                 ).add(
                     Attributes.ATTACK_SPEED,
                     new AttributeModifier(
-                        SugarMod.id("base_attack_speed"),
+                        ModItemIds.DRAGON_LORE.identifier(),
                         -0.2,
                         AttributeModifier.Operation.ADD_VALUE
                     )
@@ -583,6 +583,67 @@ public class ModItems {
         new Item.Properties()
             .durability(455)
             .enchantable(3)
+    );
+    
+    public static final Item RED_LORE = register(
+        ModItemIds.RED_LORE,
+        Item::new,
+        new Item.Properties().stacksTo(1).component(
+            ModDataComponents.INVENTORY_ATTRIBUTES,
+            InventoryAttributesComponent.builder()
+                .add(
+                    Attributes.ATTACK_SPEED,
+                    new AttributeModifier(
+                        ModItemIds.RED_LORE.identifier(),
+                        0.1,
+                        AttributeModifier.Operation.ADD_VALUE
+                    )
+                ).build()
+        ).component(
+            ModDataComponents.SIMPLE_TOOLTIP,
+            new SimpleTooltipComponent(List.of(
+                Component.translatable("itemTooltip.sugar.red_lore.line1"),
+                Component.translatable("itemTooltip.sugar.red_lore.line2"),
+                Component.translatable("itemTooltip.sugar.red_lore.line3")
+            ))
+        )
+    );
+    
+    public static final Item BLUE_LORE = register(
+        ModItemIds.BLUE_LORE,
+        Item::new,
+        new Item.Properties().stacksTo(1).component(
+            ModDataComponents.INVENTORY_ATTRIBUTES,
+            InventoryAttributesComponent.builder()
+                .add(
+                    Attributes.MAX_HEALTH,
+                    new AttributeModifier(
+                        ModItemIds.BLUE_LORE.identifier(),
+                        2,
+                        AttributeModifier.Operation.ADD_VALUE
+                    )
+                ).add(
+                    Attributes.ARMOR,
+                    new AttributeModifier(
+                        ModItemIds.BLUE_LORE.identifier(),
+                        -1,
+                        AttributeModifier.Operation.ADD_VALUE
+                    )
+                ).build()
+        ).component(
+            ModDataComponents.SIMPLE_TOOLTIP,
+            new SimpleTooltipComponent(List.of(
+                Component.translatable("itemTooltip.sugar.blue_lore.line1"),
+                Component.translatable("itemTooltip.sugar.blue_lore.line2"),
+                Component.translatable("itemTooltip.sugar.blue_lore.line3")
+            ))
+        )
+    );
+
+    public static final Item ARMORED_KEY = register(
+        ModItemIds.ARMORED_KEY,
+        Item::new,
+        new Item.Properties()
     );
 
 	public static Item register(

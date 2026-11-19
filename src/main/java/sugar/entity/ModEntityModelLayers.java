@@ -3,7 +3,6 @@ package sugar.entity;
 import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.monster.creeper.CreeperModel;
 import net.minecraft.client.model.geom.builders.CubeDeformation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
 import sugar.SugarMod;
@@ -14,13 +13,14 @@ public class ModEntityModelLayers {
 	public static final ModelLayerLocation BERRY_GOD = createMain("berry_god");
 	public static final ModelLayerLocation PENTUSK = createMain("pentusk");
 	public static final ModelLayerLocation HERMIT_DRAGON = createMain("hermit_dragon");
-	public static final ModelLayerLocation SWEEPER = createMain("sweeper");
-	public static final ModelLayerLocation CANDIED = createMain("candied");
 	public static final ModelLayerLocation BLACK_HOLE = createMain("black_hole");
 	public static final ModelLayerLocation WIND_ATTACK = createMain("wind_attack");
 	public static final ModelLayerLocation ALLIGANT = createMain("alligant");
 	public static final ModelLayerLocation ALLIGANT_NEST = createMain("alligant_nest");
 	public static final ModelLayerLocation AMD = createMain("amd");
+	public static final ModelLayerLocation GNOME = createMain("gnome");
+	public static final ModelLayerLocation ARC = createMain("arc");
+	public static final ModelLayerLocation BABY_ARC = createMain("arc_baby");
 
 	private static ModelLayerLocation createMain(String name) {
 		return new ModelLayerLocation(SugarMod.id(name), "main");
@@ -37,10 +37,6 @@ public class ModEntityModelLayers {
 			PentuskModel::getTexturedModelData);
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.HERMIT_DRAGON,
 			HermitDragonModel::getTexturedModelData);
-		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.SWEEPER,
-			() -> CreeperModel.createBodyLayer(CubeDeformation.NONE));
-		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.CANDIED,
-			() -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0), 64, 64));
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.BLACK_HOLE,
 			BlackHoleModel::createBodyLayer);
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.WIND_ATTACK,
@@ -51,5 +47,11 @@ public class ModEntityModelLayers {
 			AlligantNestModel::createBodyLayer);
 		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.AMD,
 			AMDModel::createBodyLayer);
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.GNOME,
+			GnomeModel::createBodyLayer);
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.ARC,
+			() -> LayerDefinition.create(HumanoidModel.createMesh(CubeDeformation.NONE, 0), 64, 64));
+		ModelLayerRegistry.registerModelLayer(ModEntityModelLayers.BABY_ARC,
+			() -> BabyArcModel.createBodyLayer(CubeDeformation.NONE));
 	}
 }

@@ -1,0 +1,15 @@
+{
+  "structures": [
+    {
+      "structure": "sugar:arc_ruins",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 12345678,
+    "spacing": 50,
+    "separation": 8,
+    "spread_type": "linear"
+  }
+}

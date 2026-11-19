@@ -98,6 +98,26 @@ public class ModBlocks {
 			.sound(SoundType.GRAVEL)
 			.strength(0.5f)
     );
+	
+    public static final Block ARC_EGG = register(
+		ModBlockItemIds.ARC_EGG,
+		ArcEgg::new,
+		BlockBehaviour.Properties.of()
+			.sound(SoundType.METAL)
+			.strength(0.5f)
+			.randomTicks()
+			.pushReaction(PushReaction.POPPED)
+    );
+	
+    public static final Block TWIN_AMD_ALTER = register(
+		ModBlockItemIds.TWIN_AMD_ALTER,
+		TwinAMDAlter::new,
+		BlockBehaviour.Properties.of()
+			.sound(SoundType.METAL)
+			.strength(-1f)
+			.pushReaction(PushReaction.IMMOVEABLE)
+    );
+
 
 	private static Block register(
         BlockItemId id,

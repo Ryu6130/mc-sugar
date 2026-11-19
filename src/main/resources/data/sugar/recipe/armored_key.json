@@ -1,0 +1,15 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"SS",
+		"SS",
+		"SS"
+	],
+	"key": {
+		"S": "sugar:sugarite_ingot"
+	},
+	"result": {
+		"id": "sugar:armored_key",
+		"count": 1
+	}
+}

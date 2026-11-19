@@ -47,6 +47,9 @@ public class ModItemIds {
 	public static final ResourceKey<Item> SELFISH_LORE = create("selfish_lore");
 	public static final ResourceKey<Item> DRAGON_LORE = create("dragon_lore");
 	public static final ResourceKey<Item> RAINBOW_BOW = create("rainbow_bow");
+	public static final ResourceKey<Item> RED_LORE = create("red_lore");
+	public static final ResourceKey<Item> BLUE_LORE = create("blue_lore");
+	public static final ResourceKey<Item> ARMORED_KEY = create("armored_key");
 
 	public static ResourceKey<Item> create(String name) {
 		return ResourceKey.create(Registries.ITEM, SugarMod.id(name));

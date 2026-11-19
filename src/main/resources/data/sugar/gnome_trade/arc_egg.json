@@ -1,0 +1,15 @@
+{
+  "gives": {
+    "count": 2,
+    "id": "sugar:arc_egg"
+  },
+  "max_uses": 1,
+  "reputation_discount": 0.05,
+  "wants": {
+    "id": "sugar:red_lore"
+  },
+  "additional_wants": {
+    "id": "sugar:blue_lore"
+  },
+  "xp": 10
+}

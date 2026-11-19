@@ -78,8 +78,14 @@ public class ModCreativeModeTabs {
             output.accept(ModBlocks.CANE_LOG);
             output.accept(ModBlocks.CANE_LEAVES);
             
+            output.accept(ModBlocks.TWIN_AMD_ALTER);
+            output.accept(ModItems.ARMORED_KEY);
+            output.accept(ModBlocks.ARC_EGG);
+            
             output.accept(ModItems.SELFISH_LORE);
             output.accept(ModItems.DRAGON_LORE);
+            output.accept(ModItems.RED_LORE);
+            output.accept(ModItems.BLUE_LORE);
         })
         .build();
 

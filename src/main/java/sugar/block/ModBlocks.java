@@ -1,6 +1,7 @@
 package sugar.block;
 
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.Function;
 
 import net.fabricmc.fabric.api.client.rendering.v1.BlockColorRegistry;
@@ -10,9 +11,15 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.references.BlockItemId;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.component.CookingFuel;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
+import net.minecraft.world.item.component.Weapon;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.RotatedPillarBlock;
@@ -24,6 +31,9 @@ import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.storage.loot.providers.number.floats.ContextFloatProviders;
 import net.minecraft.world.level.storage.loot.providers.number.floats.ResolvableFloat;
 import net.minecraft.world.level.storage.loot.providers.number.ints.ResolvableInt;
+import sugar.SugarMod;
+import sugar.item.Lollipop;
+import sugar.item.ModItemTags;
 
 public class ModBlocks {
     public static final Block SUGAR_CUBE = register(
@@ -118,6 +128,47 @@ public class ModBlocks {
 			.pushReaction(PushReaction.IMMOVEABLE)
     );
 
+    public static final Block LOLLIPOP = register(
+        ModBlockItemIds.LOLLIPOP,
+		LollipopBlock::new,
+		BlockBehaviour.Properties.of()
+			.sound(SoundType.GRASS)
+			.pushReaction(PushReaction.POPPED)
+            .noCollision()
+            .noOcclusion()
+            .isValidSpawn(Blocks::never)
+            .isRedstoneConductor(Blocks::never)
+            .isSuffocating(Blocks::never),
+        Lollipop::new,
+        new Item.Properties().durability(333).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.ATTACK_DAMAGE,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_DAMAGE_ID,
+                        11,
+                        Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ATTACK_SPEED,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_SPEED_ID,
+                        -2.9,
+                        Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ATTACK_KNOCKBACK,
+                    new AttributeModifier(
+                        SugarMod.id("base_attack_knockback"),
+                        2,
+                        Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).build()
+        ).component(DataComponents.WEAPON, new Weapon(1)).repairable(ModItemTags.REPAIRS_CANDY)
+    );
 
 	private static Block register(
         BlockItemId id,
@@ -141,6 +192,21 @@ public class ModBlocks {
 		Block block = register(id.block(), blockFactory, properties);
 
 		BlockItem blockItem = new BlockItem(block, itemProperties.useBlockDescriptionPrefix().setId(id.item()));
+		Registry.register(BuiltInRegistries.ITEM, id.item(), blockItem);
+
+		return block;
+	}
+
+	private static Block register(
+        BlockItemId id,
+        Function<BlockBehaviour.Properties, Block> blockFactory,
+        BlockBehaviour.Properties properties,
+        BiFunction<Block, Item.Properties, BlockItem> itemFactory,
+		Item.Properties itemProperties
+    ) {
+		Block block = register(id.block(), blockFactory, properties);
+
+		BlockItem blockItem = itemFactory.apply(block, itemProperties.useBlockDescriptionPrefix().setId(id.item()));
 		Registry.register(BuiltInRegistries.ITEM, id.item(), blockItem);
 
 		return block;

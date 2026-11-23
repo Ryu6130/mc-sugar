@@ -74,6 +74,8 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.JUST_NIL);
             output.accept(ModItems.EVEN_LIGHTOO);
             output.accept(ModItems.SWORD_OF_THE_SAGE_REALM);
+            output.accept(ModItems.PRECISE_SHEARS);
+            output.accept(ModBlocks.LOLLIPOP);
 
             output.accept(ModBlocks.CANE_LOG);
             output.accept(ModBlocks.CANE_LEAVES);

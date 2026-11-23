@@ -111,5 +111,7 @@
   "entity.sugar.arc": "アーク",
   "block.sugar.twin_amd_alter": "ツインアムドの祭壇",
   "item.sugar.armored_key": "アーマードキー",
-  "item.sugar.exo_armor_scrap": "アーマー外殻"
+  "item.sugar.exo_armor_scrap": "アーマー外殻",
+  "block.sugar.lollipop": "ペロペロキャンディ",
+  "item.sugar.precise_shears": "極精密ハサミ"
 }

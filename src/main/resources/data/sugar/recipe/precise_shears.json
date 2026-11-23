@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" EE",
+		"ESE",
+		"EE "
+	],
+	"key": {
+		"E": "sugar:exo_armor_scrap",
+		"S": "minecraft:shears"
+	},
+	"result": {
+		"id": "sugar:precise_shears",
+		"count": 1
+	}
+}

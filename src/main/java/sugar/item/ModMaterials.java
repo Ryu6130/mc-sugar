@@ -40,7 +40,7 @@ public class ModMaterials {
 		SoundEvents.ARMOR_EQUIP_LEATHER,
 		0.0F,
 		0.0F,
-		ModItemTags.REPAIRS_JET_BOOTS,
+		ModItemTags.REPAIRS_GUMMY,
 		GUMMY_MATERIAL_KEY
     );
 	

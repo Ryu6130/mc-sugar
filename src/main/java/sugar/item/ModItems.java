@@ -652,6 +652,31 @@ public class ModItems {
         new Item.Properties()
     );
 
+    public static final Item PRECISE_SHEARS = register(
+        ModItemIds.PRECISE_SHEARS,
+        Item::new,
+        new Item.Properties().durability(400).attributes(
+            ItemAttributeModifiers.builder()
+                .add(
+                    Attributes.ATTACK_DAMAGE,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_DAMAGE_ID,
+                        3,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).add(
+                    Attributes.ATTACK_SPEED,
+                    new AttributeModifier(
+                        Item.BASE_ATTACK_SPEED_ID,
+                        -1.5,
+                        AttributeModifier.Operation.ADD_VALUE
+                    ),
+                    EquipmentSlotGroup.MAINHAND
+                ).build()
+        ).component(DataComponents.WEAPON, new Weapon(1))
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

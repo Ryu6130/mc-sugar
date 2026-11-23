@@ -111,5 +111,7 @@
   "entity.sugar.arc": "Arc",
   "block.sugar.twin_amd_alter": "Twin AMD Alter",
   "item.sugar.armored_key": "Armored Key",
-  "item.sugar.exo_armor_scrap": "Exo Armor Scrap"
+  "item.sugar.exo_armor_scrap": "Exo Armor Scrap",
+  "block.sugar.lollipop": "Lollipop",
+  "item.sugar.precise_shears": "Precise Shears"
 }

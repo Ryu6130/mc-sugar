@@ -113,5 +113,7 @@
   "item.sugar.armored_key": "Armored Key",
   "item.sugar.exo_armor_scrap": "Exo Armor Scrap",
   "block.sugar.lollipop": "Lollipop",
-  "item.sugar.precise_shears": "Precise Shears"
+  "item.sugar.precise_shears": "Precise Shears",
+  "block.sugar.sugar_converter": "Sugar Converter",
+  "item.sugar.omni_essence": "Omni Essence"
 }

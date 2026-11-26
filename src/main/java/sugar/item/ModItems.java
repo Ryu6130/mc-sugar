@@ -677,6 +677,12 @@ public class ModItems {
         ).component(DataComponents.WEAPON, new Weapon(1))
     );
 
+    public static final Item OMNI_ESSENCE = register(
+        ModItemIds.OMNI_ESSENCE,
+        Item::new,
+        new Item.Properties()
+    );
+
 	public static Item register(
         ResourceKey<Item> itemKey,
         Function<Item.Properties, Item> itemFactory,

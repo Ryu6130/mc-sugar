@@ -31,6 +31,7 @@ import sugar.menu.DesugarerScreen;
 import sugar.menu.FermentationTankScreen;
 import sugar.menu.ModMenuTypes;
 import sugar.menu.SugarStorageScreen;
+import sugar.menu.SugarConverterScreen;
 
 public class SugarClientMod implements ClientModInitializer {
     @Override
@@ -38,6 +39,7 @@ public class SugarClientMod implements ClientModInitializer {
         MenuScreens.register(ModMenuTypes.DESUGARER, DesugarerScreen::new);
         MenuScreens.register(ModMenuTypes.SUGAR_STORAGE, SugarStorageScreen::new);
         MenuScreens.register(ModMenuTypes.FERMENTATION_TANK, FermentationTankScreen::new);
+        MenuScreens.register(ModMenuTypes.SUGAR_CONVERTER, SugarConverterScreen::new);
 		ModEntityModelLayers.registerModelLayers();
         EntityRenderers.register(ModEntityTypes.DESERT_DESSERT, DesertDessertRenderer::new);
         EntityRenderers.register(ModEntityTypes.SUGARDIAN, SugardianRenderer::new);

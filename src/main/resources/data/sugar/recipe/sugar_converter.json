@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"RVR",
+		"RSR",
+		"ROR"
+	],
+	"key": {
+		"R": "sugar:sugarrack",
+		"V": "sugar:void",
+		"S": "sugar:sugar_storage",
+		"O": "sugar:omni_essence"
+	},
+	"result": {
+		"id": "sugar:sugar_converter",
+		"count": 1
+	}
+}

@@ -1,5 +1,6 @@
 package sugar.menu;
 
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
 import net.minecraft.world.InteractionHand;
@@ -58,7 +59,11 @@ public class SugarStorageMenu extends AbstractContainerMenu {
 				) {
 					@Override
 					public boolean mayPlace(ItemStack stack) {
-						if (stack.is(ModItems.SUGAR_STORAGE) || stack.is(Items.SHULKER_BOX)) {
+						if (
+							stack.is(ModItems.SUGAR_STORAGE) ||
+							stack.is(Items.SHULKER_BOX) ||
+							stack.has(DataComponents.CONTAINER)
+						) {
 							return false;
 						}
 

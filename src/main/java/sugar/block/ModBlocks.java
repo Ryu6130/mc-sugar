@@ -26,6 +26,7 @@ import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.TintedParticleLeavesBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockBehaviour.OffsetType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraft.world.level.storage.loot.providers.number.floats.ContextFloatProviders;
@@ -135,10 +136,8 @@ public class ModBlocks {
 			.sound(SoundType.GRASS)
 			.pushReaction(PushReaction.POPPED)
             .noCollision()
-            .noOcclusion()
-            .isValidSpawn(Blocks::never)
-            .isRedstoneConductor(Blocks::never)
-            .isSuffocating(Blocks::never),
+            .instabreak()
+            .offsetType(OffsetType.XZ),
         Lollipop::new,
         new Item.Properties().durability(333).attributes(
             ItemAttributeModifiers.builder()
@@ -168,6 +167,15 @@ public class ModBlocks {
                     EquipmentSlotGroup.MAINHAND
                 ).build()
         ).component(DataComponents.WEAPON, new Weapon(1)).repairable(ModItemTags.REPAIRS_CANDY)
+    );
+	
+    public static final Block SUGAR_CONVERTER = register(
+		ModBlockItemIds.SUGAR_CONVERTER,
+		SugarConverter::new,
+		BlockBehaviour.Properties.of()
+			.sound(SoundType.METAL)
+			.strength(2f)
+			.pushReaction(PushReaction.IMMOVEABLE)
     );
 
 	private static Block register(

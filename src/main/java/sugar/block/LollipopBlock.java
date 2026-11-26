@@ -1,18 +1,17 @@
 package sugar.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.TransparentBlock;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.VegetationBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class LollipopBlock extends TransparentBlock {
+public class LollipopBlock extends VegetationBlock {
     public LollipopBlock(Properties properties) {
         super(properties);
     }
     
     @Override
-    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        BlockState below = level.getBlockState(pos.below());
-        return below.is(ModBlocks.SUGAR_CLOD);
+    protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
+        return state.is(ModBlocks.SUGAR_CLOD);
     }
 }

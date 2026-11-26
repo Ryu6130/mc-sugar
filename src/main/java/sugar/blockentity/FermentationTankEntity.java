@@ -74,7 +74,7 @@ public class FermentationTankEntity extends BlockEntity implements Container, Co
 			ItemStack result = recipe.assemble(recipeInput);
 			if (
 				ItemStack.isSameItemSameComponents(entity.getItem(2), result) &&
-				result.count() + entity.getItem(1).count() <= result.getMaxStackSize()
+				result.count() + entity.getItem(2).count() <= result.getMaxStackSize()
 			) {
 				entity.getItem(2).grow(result.count());
 				entity.progress = 0;

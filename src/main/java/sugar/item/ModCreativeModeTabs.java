@@ -42,6 +42,7 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.MAGICAL_JAW);
             
             output.accept(ModItems.VOID);
+            output.accept(ModItems.OMNI_ESSENCE);
             output.accept(ModItems.HERMIT_DRAGON_SCALE);
 
             output.accept(ModItems.SAND_BERRY);
@@ -60,6 +61,7 @@ public class ModCreativeModeTabs {
             output.accept(ModItems.SUGAR_CELL);
 
             output.accept(ModBlocks.DESUGARER);
+            output.accept(ModBlocks.SUGAR_CONVERTER);
             output.accept(ModBlocks.FERMENTATION_TANK);
 
             output.accept(ModItems.WOW_BOW);

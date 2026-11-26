@@ -12,15 +12,18 @@ import sugar.block.ModBlocks;
 
 public class ModBlockEntityTypes {
     public static final BlockEntityType<DesugarerEntity> DESUGARER =
-		register("desugarer", DesugarerEntity::new, ModBlocks.DESUGARER);
+        register("desugarer", DesugarerEntity::new, ModBlocks.DESUGARER);
         
     public static final BlockEntityType<FermentationTankEntity> FERMENTATION_TANK =
-		register("fermentation_tank", FermentationTankEntity::new, ModBlocks.FERMENTATION_TANK);
+        register("fermentation_tank", FermentationTankEntity::new, ModBlocks.FERMENTATION_TANK);
+        
+    public static final BlockEntityType<SugarConverterEntity> SUGAR_CONVERTER =
+        register("sugarizer", SugarConverterEntity::new, ModBlocks.SUGAR_CONVERTER);
 
     private static <T extends BlockEntity> BlockEntityType<T> register(
-            String name,
-            FabricBlockEntityTypeBuilder.Factory<? extends T> entityFactory,
-            Block... blocks
+        String name,
+        FabricBlockEntityTypeBuilder.Factory<? extends T> entityFactory,
+        Block... blocks
     ) {
         Identifier id = SugarMod.id(name);
         return Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, id, FabricBlockEntityTypeBuilder.<T>create(entityFactory, blocks).build());

@@ -113,5 +113,7 @@
   "item.sugar.armored_key": "アーマードキー",
   "item.sugar.exo_armor_scrap": "アーマー外殻",
   "block.sugar.lollipop": "ペロペロキャンディ",
-  "item.sugar.precise_shears": "極精密ハサミ"
+  "item.sugar.precise_shears": "極精密ハサミ",
+  "block.sugar.sugar_converter": "砂糖コンバータ",
+  "item.sugar.omni_essence": "オムニエッセンス"
 }

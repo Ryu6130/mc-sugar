@@ -16,6 +16,7 @@ public class ModBlockItemIds {
 	public static final BlockItemId ARC_EGG = create("arc_egg");
 	public static final BlockItemId TWIN_AMD_ALTER = create("twin_amd_alter");
 	public static final BlockItemId LOLLIPOP = create("lollipop");
+	public static final BlockItemId SUGAR_CONVERTER = create("sugar_converter");
 
 	private static BlockItemId create(String name) {
 		Identifier id = SugarMod.id(name);

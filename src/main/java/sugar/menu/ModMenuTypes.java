@@ -19,6 +19,9 @@ public class ModMenuTypes {
 		));
 	public static final MenuType<FermentationTankMenu> FERMENTATION_TANK =
 		register("fermentation_tank", FermentationTankMenu::new);
+		
+	public static final MenuType<SugarConverterMenu> SUGAR_CONVERTER =
+		register("sugar_converter", SugarConverterMenu::new);
 
 	public static <T extends AbstractContainerMenu> MenuType<T> register(
         String name,
